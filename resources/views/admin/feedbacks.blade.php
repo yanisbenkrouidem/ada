@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks - ADA Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Schibsted Grotesk', sans-serif; background-color: #F3F4F6; }
+        .sidebar-link { display: flex; align-items: center; gap: 14px; padding: 14px 20px; color: #9CA3AF; border-radius: 16px; transition: all 0.3s; margin-bottom: 8px; font-weight: 500; }
+        .sidebar-link:hover, .sidebar-link.active { background: #222; color: white; }
+        .sidebar-link.active i { color: #F97316; }
+        .ecom-card { background: white; border-radius: 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); padding: 24px; }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden text-gray-800">
+    
+    <aside class="w-72 bg-[#111111] text-white flex flex-col p-6 hidden md:flex flex-shrink-0">
+        <div class="flex items-center gap-3 mb-12 px-2">
+            <img src="<?php echo asset('images/ADAlogo1.png'); ?>" class="h-8 filter invert opacity-90"> 
+        </div>
+        <nav class="flex-1">
+            <a href="<?php echo route('admin.dashboard'); ?>" class="sidebar-link"><i class="fa-solid fa-grid-2"></i> Dashboard</a>
+            <a href="<?php echo route('admin.vehicules'); ?>" class="sidebar-link"><i class="fa-solid fa-car"></i> Véhicules</a>
+            <a href="<?php echo route('admin.clients'); ?>" class="sidebar-link"><i class="fa-solid fa-users"></i> Clients</a>
+            <a href="<?php echo route('admin.feedbacks'); ?>" class="sidebar-link active"><i class="fa-solid fa-envelope"></i> Feedbacks</a>
+        </nav>
+        <div class="p-4 bg-[#1A1A1A] rounded-2xl mt-4 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-400 to-red-500 flex items-center justify-center font-bold text-white text-sm">YB</div>
+            <div class="overflow-hidden"><p class="text-sm font-bold text-white truncate"><?php echo auth()->user()->name ?? 'Admin'; ?></p><p class="text-xs text-gray-500">Administrateur</p></div>
+        </div>
+    </aside>
+    
+    <main class="flex-1 flex flex-col overflow-y-auto">
+        <header class="bg-white/50 backdrop-blur-md py-4 px-8 flex justify-between items-center sticky top-0 z-20">
+            <h1 class="text-2xl font-bold text-gray-800">Avis & Retours</h1>
+        </header>
+
+        <div class="p-8">
+            <div class="ecom-card">
+                <div class="grid grid-cols-1 gap-4">
+                    <?php foreach($feedbacks as $f): ?>
+                        <div class="flex items-center gap-4 p-4 rounded-xl border border-gray-100 hover:shadow-md transition-all bg-gray-50/50">
+                            <?php 
+                                $bg = 'bg-gray-200'; $color = 'text-gray-600';
+                                if($f->rating == 'Excellent') { $bg = 'bg-green-100'; $color = 'text-green-600'; }
+                                if($f->rating == 'Poor') { $bg = 'bg-red-100'; $color = 'text-red-600'; }
+                            ?>
+                            <div class="w-12 h-12 rounded-full <?php echo $bg; ?> flex items-center justify-center text-xl font-bold <?php echo $color; ?>">
+                                <?php echo strtoupper(substr($f->rating, 0, 1)); ?>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between">
+                                    <h3 class="font-bold text-gray-800"><?php echo $f->rating; ?></h3>
+                                    <span class="text-xs text-gray-400"><?php echo date('d/m/Y H:i', strtotime($f->created_at)); ?></span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-1">Page concernée : <span class="font-mono bg-white px-1 rounded border"><?php echo $f->page; ?></span></p>
+                                <p class="text-xs text-gray-400 mt-1">IP: <?php echo $f->ip_address; ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="mt-6">
+                    <?php echo $feedbacks->links(); ?>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
