@@ -24,11 +24,6 @@
             "dest": "/api/index.php"
         }
     ],
-    "functions": {
-        "api/index.php": {
-            "excludeFiles": "{node_modules/**,public/**,storage/logs/**,basededonnée/**,tests/**}"
-        }
-    },
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
