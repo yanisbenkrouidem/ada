@@ -1,0 +1,13 @@
+/node_modules
+/public/build
+/.git
+/storage/framework/cache/*
+/storage/framework/views/*
+/storage/logs/*
+/tests
+/phpunit.xml
+/vite.config.js
+/package.json
+/package-lock.json
+/README.md
+/composer.lock
