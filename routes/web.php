@@ -43,6 +43,10 @@ Route::post('/espace-client/logout', [ClientController::class, 'logout'])->name(
 Route::get('/inscription', [ClientController::class, 'showRegisterForm'])->name('client.register.form');
 Route::post('/inscription', [ClientController::class, 'register'])->name('client.register');
 
+// OAuth Google
+Route::get('/auth/google', [\App\Http\Controllers\OAuthController::class, 'redirectToGoogle'])->name('auth.google');
+Route::get('/auth/google/callback', [\App\Http\Controllers\OAuthController::class, 'handleGoogleCallback'])->name('auth.google.callback');
+
 // --- 4. PANIER & COMMANDE (NOUVEAU SYSTÈME) ---
 Route::get('/panier', [PanierController::class, 'index'])->name('panier.index');
 Route::post('/panier/ajouter', [PanierController::class, 'store'])->name('panier.add');

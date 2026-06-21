@@ -158,16 +158,11 @@ $title = 'Connexion à votre espace';
                     </p>
                 </div>
 
-                <div class="grid grid-cols-3 gap-3 mb-6">
-                    <button type="button" onclick="showComingSoon('Apple')" class="flex items-center justify-center py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors">
-                        <i class="fa-brands fa-apple text-xl"></i>
-                    </button>
-                    <button type="button" onclick="showComingSoon('Facebook')" class="flex items-center justify-center py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors bg-[#1877F2] border-transparent text-white">
-                        <i class="fa-brands fa-facebook-f text-lg"></i>
-                    </button>
-                    <button type="button" onclick="showComingSoon('Google')" class="flex items-center justify-center py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors">
+                <div class="mb-6">
+                    <a href="<?php echo url('/auth/google'); ?>" class="flex items-center justify-center gap-3 py-3 w-full border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors text-gray-700 font-semibold text-sm">
                         <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5" alt="Google">
-                    </button>
+                        <span data-key="google_btn">Continuer avec Google</span>
+                    </a>
                 </div>
 
                 <div class="relative flex py-2 items-center mb-6">

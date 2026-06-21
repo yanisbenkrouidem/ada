@@ -274,16 +274,11 @@ $errors = session('errors');
                         <div class="relative flex justify-center text-[9px] font-bold text-gray-400 uppercase"><span class="px-2 bg-white" data-key="or">Ou</span></div>
                     </div>
 
-                    <div class="grid grid-cols-3 gap-2">
-                        <button type="button" onclick="showComingSoon('Apple')" class="social-btn">
-                            <i class="fa-brands fa-apple text-lg"></i>
-                        </button>
-                        <button type="button" onclick="showComingSoon('Facebook')" class="social-btn">
-                            <i class="fa-brands fa-facebook-f text-sm text-[#1877F2]"></i>
-                        </button>
-                        <button type="button" onclick="showComingSoon('Google')" class="social-btn">
-                            <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-3.5 h-3.5" alt="Google">
-                        </button>
+                    <div class="mt-2">
+                        <a href="<?php echo url('/auth/google'); ?>" class="flex items-center justify-center gap-2 py-2.5 w-full border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-gray-700 font-semibold text-[11px] uppercase tracking-wide">
+                            <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-4 h-4" alt="Google">
+                            <span data-key="google_btn">S'inscrire avec Google</span>
+                        </a>
                     </div>
 
                     <div class="text-center pt-3 pb-1">
