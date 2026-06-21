@@ -46,6 +46,7 @@
         "SESSION_DRIVER": "cookie",
         "SESSION_LIFETIME": "120",
         "CACHE_STORE": "file",
-        "QUEUE_CONNECTION": "sync"
+        "QUEUE_CONNECTION": "sync",
+        "GOOGLE_REDIRECT_URI": "https://ada.benkrouidem.com/auth/google/callback"
     }
 }
