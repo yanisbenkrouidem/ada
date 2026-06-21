@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     <style>body { font-family: 'Poppins', sans-serif; background-color: #f9f9f9; }</style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
     <div class="bg-white rounded-lg shadow-xl p-12 max-w-lg w-full text-center">
         <h1 class="text-3xl font-bold text-gray-800 mb-2">
             Erreur <span class="text-[#f43f4a]">@yield('code')</span>
