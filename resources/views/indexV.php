@@ -84,8 +84,8 @@ $heroImage2 = function_exists('asset') ? asset('images/williamsreunauly.jpg') : 
         /* --- LAYOUT HERO --- */
         .hero-wrapper {
             position: relative;
-            height: 94svh; /* Fallback */
-            height: 94dvh; /* Dynamic viewport height for mobile */
+            height: 100vh; /* Full viewport height */
+            height: 100dvh; /* Dynamic viewport height for mobile */
             width: 100%;
             background: #000;
             z-index: 10;
