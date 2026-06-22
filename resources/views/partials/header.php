@@ -510,27 +510,7 @@ if ($isConnected && \Illuminate\Support\Facades\Schema::hasTable('favoris')) {
                     <span class="lv-text nav-text-color hidden md:block">Menu</span>
                 </button>
                 
-                <div class="nav-search-container">
-                    <form action="<?php echo route('vehicules.flotte'); ?>" method="GET">
-                        <i class="fa-solid fa-magnifying-glass nav-search-icon-pos"></i>
-                        <input type="text" id="navSearchInput" name="search_ville" class="nav-search-input" placeholder="Rechercher..." autocomplete="off">
-                        
-                        <div class="nav-suggestions">
-                            <div class="nav-suggestion-title">Agences Populaires</div>
-                            <span onclick="fillNavSearch('Mâcon')" class="nav-suggestion-item">Mâcon</span>
-                            <span onclick="fillNavSearch('Chalon')" class="nav-suggestion-item">Chalon</span>
-                            <span onclick="fillNavSearch('Lyon')" class="nav-suggestion-item">Lyon</span>
-                            <span onclick="fillNavSearch('Paris')" class="nav-suggestion-item">Paris</span>
-                        </div>
-                    </form>
-                </div>
 
-                <a href="<?php echo route('location.search.form'); ?>" class="lg:hidden flex items-center gap-3 cursor-pointer hover:opacity-70 transition-opacity">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="block">
-                        <circle cx="11" cy="11" r="7" class="nav-icon" />
-                        <path d="M20 20L16 16" class="nav-icon" stroke-linecap="square"/>
-                    </svg>
-                </a>
             </div>
 
             <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -614,35 +594,7 @@ if ($isConnected && \Illuminate\Support\Facades\Schema::hasTable('favoris')) {
             updateHeader();
         });
 
-        // NAVBAR TYPING EFFECT
-        const citiesNav = ["Rechercher Mâcon", "Rechercher Chalon", "Rechercher Lyon"];
-        const navInput = document.getElementById("navSearchInput");
-        if(navInput) {
-            let nCityIndex = 0, nCharIndex = 0, nIsDeleting = false;
-            function navTypeEffect() {
-                if (navInput.value.length > 0 && navInput !== document.activeElement) return;
-                const current = citiesNav[nCityIndex];
-                if (nIsDeleting) {
-                    navInput.setAttribute("placeholder", current.substring(0, nCharIndex - 1));
-                    nCharIndex--;
-                } else {
-                    navInput.setAttribute("placeholder", current.substring(0, nCharIndex + 1));
-                    nCharIndex++;
-                }
-                let speed = nIsDeleting ? 40 : 80;
-                if (!nIsDeleting && nCharIndex === current.length) { nIsDeleting = true; speed = 2000; }
-                else if (nIsDeleting && nCharIndex === 0) { nIsDeleting = false; nCityIndex = (nCityIndex + 1) % citiesNav.length; speed = 500; }
-                setTimeout(navTypeEffect, speed);
-            }
-            setTimeout(navTypeEffect, 1000);
-        }
 
-        // FILL SEARCH FROM SUGGESTION
-        function fillNavSearch(ville) {
-            const input = document.getElementById('navSearchInput');
-            input.value = ville;
-            input.form.submit();
-        }
 
         // SIDEBARS LOGIC
         const leftSidebar = document.getElementById('left-sidebar');
