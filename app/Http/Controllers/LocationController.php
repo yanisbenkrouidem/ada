@@ -75,7 +75,7 @@ class LocationController extends Controller
         $prixTotal = 0;
         $nbJours = 0;
 
-        return view('reservation_createV', compact('vehicule', 'date_debut', 'date_fin', 'prixTotal', 'nbJours'));
+        return view('bookings.create', compact('vehicule', 'date_debut', 'date_fin', 'prixTotal', 'nbJours'));
     }
 
     public function reserver(Request $request, $vehicule_id)

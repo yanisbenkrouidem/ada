@@ -94,7 +94,7 @@ Route::get('/api/offres/search', [AgenceController::class, 'searchHomeVehicules'
 
 // Ajoutez cette ligne :
 Route::get('/carrieres', function () {
-    return view('carrieres'); // Assurez-vous que le fichier de vue s'appelle bien carrieres.blade.php
+    return view('pages.careers'); 
 })->name('carrieres');
 // --- 7. COMPATIBILITÉ (ANCIENS LIENS DE RÉSERVATION) ---
 // Ces routes servent à éviter les erreurs 404 si des liens traînent encore vers l'ancien système

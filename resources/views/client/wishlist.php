@@ -1,7 +1,7 @@
 <?php 
 $title = 'Mes Favoris - ADA'; 
 if (function_exists('resource_path')) {
-    require resource_path('views/partials/header.php'); 
+    require resource_path('views/layouts/header.blade.php'); 
 }
 ?>
 
@@ -88,7 +88,7 @@ if (function_exists('resource_path')) {
 
     <?php 
     if (function_exists('resource_path')) {
-        require resource_path('views/partials/footer.php'); 
+        require resource_path('views/layouts/footer.blade.php'); 
     }
     ?>
 

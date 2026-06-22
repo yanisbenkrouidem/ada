@@ -1,6 +1,6 @@
 <?php 
 $title = $page['title'] . ' - ADA'; 
-require resource_path('views/partials/header.php'); 
+require resource_path('views/layouts/header.blade.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -220,7 +220,7 @@ require resource_path('views/partials/header.php');
         </div>
     </div>
 
-    <?php require resource_path('views/partials/footer.php'); ?>
+    <?php require resource_path('views/layouts/footer.blade.php'); ?>
 
 </body>
 </html>

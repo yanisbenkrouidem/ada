@@ -19,7 +19,7 @@ class AgenceController extends Controller
     {
         $agences = Agence::with('jours')->get(); 
         $vehicules = Vehicule::with('agence', 'category.genre')->get(); 
-        return view('indexV', compact('agences', 'vehicules'));
+        return view('home.index', compact('agences', 'vehicules'));
     }
 
     // 2. DÉTAILS D'UN VÉHICULE
@@ -29,21 +29,21 @@ class AgenceController extends Controller
         if (!$vehicule) {
             return redirect()->route('home')->with('error', 'Véhicule non trouvé.');
         }
-        return view('vehicule_detailsV', compact('vehicule'));
+        return view('vehicles.show', compact('vehicule'));
     }
 
     // 3. DÉTAILS D'UNE AGENCE
     public function details($id)
     {
         $agence = Agence::with(['jours', 'vehicules.category'])->findOrFail($id);
-        return view('agence_detailsV', ['agence' => $agence]);
+        return view('agencies.show', ['agence' => $agence]);
     }
 
     // 4. LISTE DE TOUTES LES AGENCES
     public function listeAgences()
     {
         $agences = Agence::all(); 
-        return view('agences_listV', compact('agences'));
+        return view('agencies.index', compact('agences'));
     }
 
     // 5. FORMULAIRE DE RECHERCHE
@@ -52,7 +52,7 @@ class AgenceController extends Controller
         $agences = Agence::all(['id', 'nom', 'ville']);
         $genres = Genre::all(['id', 'libelle']);
         $categories = Category::all(['id', 'libelle']);
-        return view('location_search_formV', compact('agences', 'genres', 'categories'));
+        return view('bookings.search', compact('agences', 'genres', 'categories'));
     }
 
     // 6. TRAITEMENT DE LA RECHERCHE
@@ -113,7 +113,7 @@ class AgenceController extends Controller
 
         $resultats = $vehiculesDisponibles->get();
 
-        return view('location_resultsV', compact('resultats', 'dateDebut', 'dateFin'));
+        return view('bookings.results', compact('resultats', 'dateDebut', 'dateFin'));
     }
 
     // 7. API RECHERCHE HOMEPAGE (AJAX)

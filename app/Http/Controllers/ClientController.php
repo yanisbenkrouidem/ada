@@ -17,7 +17,7 @@ class ClientController extends Controller
 
     public function showLoginForm()
     {
-        return view('client_login_formV');
+        return view('client.auth.login');
     }
 
     public function login(Request $request)
@@ -60,7 +60,7 @@ class ClientController extends Controller
 
     public function showRegisterForm()
     {
-        return view('client_register_formV');
+        return view('client.auth.register');
     }
 
     public function register(Request $request)
@@ -230,7 +230,7 @@ class ClientController extends Controller
         }
 
         $vehicules = $query->get();
-        return view('fleetV', ['vehicules' => $vehicules, 'title' => 'Notre Flotte']);
+        return view('vehicles.index', ['vehicules' => $vehicules, 'title' => 'Notre Flotte']);
     }
 
     public function vehiculesParCategorie($id)
@@ -245,7 +245,7 @@ class ClientController extends Controller
             ->where('categorie_id', $id)
             ->get();
 
-        return view('fleetV', [
+        return view('vehicles.index', [
             'vehicules' => $vehicules,
             'title' => 'Catégorie : ' . $categorie->libelle
         ]);

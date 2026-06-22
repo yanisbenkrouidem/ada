@@ -27,7 +27,7 @@ class PanierController extends Controller
 
         $totalGeneral = $paniers->sum('prix_total');
 
-        return view('panierV', compact('paniers', 'totalGeneral'));
+        return view('cart.index', compact('paniers', 'totalGeneral'));
     }
 
     // --- 2. AJOUTER AU PANIER ---

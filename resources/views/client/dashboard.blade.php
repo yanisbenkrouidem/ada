@@ -1,4 +1,4 @@
-@extends('base')
+@extends('layouts.app')
 
 @section('title', 'Mon Espace - ' . ucfirst(strtolower($client->prenom)))
 

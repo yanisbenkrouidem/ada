@@ -1,8 +1,8 @@
-﻿<?php 
-$title = 'RÃ©sultats de recherche - ADA France'; 
-require resource_path('views/partials/header.php');
+<?php 
+$title = 'Résultats de recherche - ADA France'; 
+require resource_path('views/layouts/header.blade.php');
 
-// Calcul durÃ©e (simulÃ© si non dispo)
+// Calcul durée (simulé si non dispo)
 $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin) ?: 1) : 1;
 ?>
 <!DOCTYPE html>
@@ -61,7 +61,7 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
             color: white;
             transition: all 0.4s var(--ease-premium);
         }
-        /* Effet survol cartes rÃ©sultats */
+        /* Effet survol cartes résultats */
         .glass-panel:hover {
             background: rgba(255, 255, 255, 0.15);
             border-color: rgba(255, 255, 255, 0.4);
@@ -69,7 +69,7 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
 
-        /* DETAILS / ACCORDÃ‰ON */
+        /* DETAILS / ACCORDÉON */
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
         details[open] summary ~ * { animation: sweep .4s ease-out; }
@@ -83,12 +83,12 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
             
             <div class="hero-animate-1">
                 <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-2 drop-shadow-2xl">
-                    RÃ©servez maintenant pour <span class="text-white border-b-2 border-white/30">ADAÂ® 2026</span>
+                    Réservez maintenant pour <span class="text-white border-b-2 border-white/30">ADA® 2026</span>
                 </h1>
                 <div class="flex items-center justify-center gap-4 mt-4 opacity-80">
                     <img src="<?php echo asset('images/ADAlogo1.png'); ?>" class="h-8 brightness-0 invert">
                     <div class="h-4 w-px bg-white/50"></div>
-                    <span class="text-white text-xs font-bold uppercase tracking-widest">Partenaire Global de MobilitÃ©</span>
+                    <span class="text-white text-xs font-bold uppercase tracking-widest">Partenaire Global de Mobilité</span>
                 </div>
             </div>
 
@@ -98,25 +98,25 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
     <div class="max-w-7xl mx-auto px-6 pb-20 relative z-20">
         
         <div class="mb-16 text-center max-w-3xl mx-auto hero-animate-2">
-            <h2 class="text-3xl font-bold mb-4">DÃ©marrez vos moteurs : Ã‰conomisez jusqu'Ã  20%</h2>
+            <h2 class="text-3xl font-bold mb-4">Démarrez vos moteurs : Économisez jusqu'à 20%</h2>
             <p class="text-gray-200 text-lg leading-relaxed mb-4">
-                Attachez votre ceinture pour un voyage extraordinaire sur les routes de France. SÃ©curisez votre forfait ADA Premium 2026 Ã  l'avance et profitez d'un voyage sans encombre.
+                Attachez votre ceinture pour un voyage extraordinaire sur les routes de France. Sécurisez votre forfait ADA Premium 2026 à l'avance et profitez d'un voyage sans encombre.
             </p>
             <p class="text-gray-400 text-xs italic bg-white/10 inline-block px-3 py-1 rounded-full">
-                *RÃ©servez maintenant pour bÃ©nÃ©ficier de la promotion YanisetNathan10.
+                *Réservez maintenant pour bénéficier de la promotion YanisetNathan10.
             </p>
         </div>
 
         <div class="mb-24">
-            <h3 class="text-2xl font-bold mb-8 pl-2 reveal">Forfaits VÃ©hicules ADAÂ® 2026</h3>
+            <h3 class="text-2xl font-bold mb-8 pl-2 reveal">Forfaits Véhicules ADA® 2026</h3>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <?php if($resultats->isEmpty()): ?>
                     <div class="col-span-full glass-panel rounded-[2rem] p-12 text-center reveal delay-100">
                         <i class="fa-solid fa-car-tunnel text-4xl text-gray-400 mb-4"></i>
-                        <h3 class="font-bold text-lg text-white">Aucun vÃ©hicule disponible</h3>
-                        <p class="text-sm text-gray-400 mt-1">Modifiez vos dates ou l'agence de dÃ©part.</p>
+                        <h3 class="font-bold text-lg text-white">Aucun véhicule disponible</h3>
+                        <p class="text-sm text-gray-400 mt-1">Modifiez vos dates ou l'agence de départ.</p>
                         <button onclick="window.history.back()" class="mt-6 px-6 py-2 border border-white/30 rounded-full hover:bg-white hover:text-black transition-all text-sm font-bold">Retour</button>
                     </div>
                 <?php else: ?>
@@ -156,9 +156,9 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
                             </div>
 
                             <div class="mt-auto flex items-center justify-between pt-4 border-t border-white/10">
-                                <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">SÃ©lectionner</span>
+                                <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Sélectionner</span>
                                 <div class="text-right">
-                                    <span class="block text-xl font-bold text-white"><?php echo number_format($prixTotal, 0, ',', ' '); ?> â‚¬</span>
+                                    <span class="block text-xl font-bold text-white"><?php echo number_format($prixTotal, 0, ',', ' '); ?> €</span>
                                 </div>
                             </div>
                         </div>
@@ -173,44 +173,44 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
         </div>
 
         <div class="mb-24 glass-panel rounded-[32px] p-10 md:p-14 reveal delay-200">
-            <h2 class="text-3xl font-bold text-white mb-10">Points forts des forfaits ADAÂ®</h2>
+            <h2 class="text-3xl font-bold text-white mb-10">Points forts des forfaits ADA®</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-12">
                 <div class="group">
                     <div class="w-10 h-10 mb-5 text-white"><i class="fa-solid fa-car-side text-3xl"></i></div>
                     <h3 class="text-xl font-bold text-white mb-3">Flotte Premium</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">Prenez la route avec nos derniers modÃ¨les, des citadines aux SUV de luxe.</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">Prenez la route avec nos derniers modèles, des citadines aux SUV de luxe.</p>
                 </div>
                 <div class="group">
                     <div class="w-10 h-10 mb-5 text-white"><i class="fa-solid fa-road text-3xl"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">KilomÃ©trage IllimitÃ©</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">Profitez d'une libertÃ© sans limites. Roulez aussi loin que vous le souhaitez.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Kilométrage Illimité</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">Profitez d'une liberté sans limites. Roulez aussi loin que vous le souhaitez.</p>
                 </div>
                 <div class="group">
                     <div class="w-10 h-10 mb-5 text-white"><i class="fa-solid fa-ticket text-3xl"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">Assurance ComplÃ¨te</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">SÃ©curisez votre voyage avec une couverture complÃ¨te incluse.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Assurance Complète</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">Sécurisez votre voyage avec une couverture complète incluse.</p>
                 </div>
                 <div class="group">
                     <div class="w-10 h-10 mb-5 text-white"><i class="fa-solid fa-star text-3xl"></i></div>
                     <h3 class="text-xl font-bold text-white mb-3">Surclassements</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">RÃ©servez une catÃ©gorie Premium pour savourer un confort inÃ©galÃ©.</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">Réservez une catégorie Premium pour savourer un confort inégalé.</p>
                 </div>
                 <div class="group">
                     <div class="w-10 h-10 mb-5 text-white"><i class="fa-solid fa-gem text-3xl"></i></div>
                     <h3 class="text-xl font-bold text-white mb-3">Cumulez des Points</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">Gagnez des points de fidÃ©litÃ© sur l'ensemble de votre location.</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">Gagnez des points de fidélité sur l'ensemble de votre location.</p>
                 </div>
                 <div class="group">
                     <div class="w-10 h-10 mb-5 text-white"><i class="fa-solid fa-wallet text-3xl"></i></div>
                     <h3 class="text-xl font-bold text-white mb-3">Payez avec des Points</h3>
-                    <p class="text-sm text-gray-300 leading-relaxed">Ã‰conomisez en utilisant Cash + Points pour votre forfait vacances.</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">Économisez en utilisant Cash + Points pour votre forfait vacances.</p>
                 </div>
             </div>
 
             <div class="mt-12 pt-8 border-t border-white/10">
                 <a href="#" class="text-white text-sm font-medium hover:underline flex items-center gap-2 transition-colors opacity-70 hover:opacity-100">
-                    Conditions gÃ©nÃ©rales applicables <i class="fa-solid fa-arrow-right text-xs"></i>
+                    Conditions générales applicables <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
         </div>
@@ -220,9 +220,9 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent"></div>
 
             <div class="relative z-10 px-12 md:px-20 max-w-2xl transform transition-transform duration-700 group-hover:translate-x-2">
-                <h2 class="text-4xl text-white font-bold mb-6 drop-shadow-lg">DÃ©bloquez un monde de rÃ©compenses exclusives</h2>
+                <h2 class="text-4xl text-white font-bold mb-6 drop-shadow-lg">Débloquez un monde de récompenses exclusives</h2>
                 <p class="text-gray-200 text-sm leading-relaxed mb-10 font-medium max-w-lg drop-shadow-md">
-                    Devenez membre du Club PrivilÃ¨ge et soyez parmi les premiers Ã  dÃ©couvrir des expÃ©riences extraordinaires. Cumulez des points sur tous les forfaits ADAÂ®.
+                    Devenez membre du Club Privilège et soyez parmi les premiers à découvrir des expériences extraordinaires. Cumulez des points sur tous les forfaits ADA®.
                 </p>
                 <a href="<?php echo route('client.register.form'); ?>" class="inline-block bg-white text-black font-bold py-3.5 px-10 rounded-full transition-all shadow-lg text-sm hover:bg-gray-200 hover:scale-105">
                     Rejoindre maintenant
@@ -234,7 +234,7 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
             <details class="group">
                 <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors list-none">
                     <span class="text-white text-sm flex items-center gap-3 font-bold">
-                        <span class="text-gray-400 font-light">1.</span> Conditions GÃ©nÃ©rales & Tarifs :
+                        <span class="text-gray-400 font-light">1.</span> Conditions Générales & Tarifs :
                     </span>
                     <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400">
                         <i class="fa-solid fa-chevron-down"></i>
@@ -242,9 +242,9 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
                 </summary>
                 <div class="text-gray-300 text-xs px-6 pb-6 pt-0 leading-relaxed pl-10">
                     <ul class="list-disc space-y-2 ml-4">
-                        <li>Les forfaits sont soumis Ã  disponibilitÃ© au moment de la confirmation de rÃ©servation.</li>
-                        <li>Les tarifs sont sujets Ã  modification sans prÃ©avis.</li>
-                        <li>Les forfaits sont non-remboursables. L'annulation du service entraÃ®nera des frais de 100%.</li>
+                        <li>Les forfaits sont soumis à disponibilité au moment de la confirmation de réservation.</li>
+                        <li>Les tarifs sont sujets à modification sans préavis.</li>
+                        <li>Les forfaits sont non-remboursables. L'annulation du service entraînera des frais de 100%.</li>
                     </ul>
                 </div>
             </details>
@@ -252,14 +252,14 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
             <details class="group">
                 <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-white/5 transition-colors list-none">
                     <span class="text-white text-sm flex items-center gap-3 font-bold">
-                        <span class="text-gray-400 font-light">2.</span> HÃ©bergement
+                        <span class="text-gray-400 font-light">2.</span> Hébergement
                     </span>
                     <span class="transition-transform duration-300 group-open:rotate-180 text-gray-400">
                         <i class="fa-solid fa-chevron-down"></i>
                     </span>
                 </summary>
                 <div class="text-gray-300 text-xs px-6 pb-6 pt-0 leading-relaxed pl-10">
-                    <p>DÃ©tails sur les hÃ´tels partenaires et les politiques d'hÃ©bergement.</p>
+                    <p>Détails sur les hôtels partenaires et les politiques d'hébergement.</p>
                 </div>
             </details>
 
@@ -273,7 +273,7 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
                     </span>
                 </summary>
                 <div class="text-gray-300 text-xs px-6 pb-6 pt-0 leading-relaxed pl-10">
-                    <p>Informations concernant l'Ã©mission et la validation du contrat de location.</p>
+                    <p>Informations concernant l'émission et la validation du contrat de location.</p>
                 </div>
             </details>
             
@@ -306,7 +306,7 @@ $duree = isset($dateDebut) && isset($dateFin) ? ($dateDebut->diffInDays($dateFin
         });
     </script>
 
-    <?php require resource_path('views/partials/footer.php'); ?>
+    <?php require resource_path('views/layouts/footer.blade.php'); ?>
 
 </body>
 </html>

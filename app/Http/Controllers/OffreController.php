@@ -84,6 +84,6 @@ class OffreController extends Controller
             ]
         ];
 
-        return view('offres_privilege', compact('plans'));
+        return view('pages.offers', compact('plans'));
     }
 }

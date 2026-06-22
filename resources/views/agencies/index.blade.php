@@ -1,5 +1,5 @@
-﻿<?php 
-$title = 'La Maison ADA - HÃ©ritage & Savoir-faire'; 
+<?php 
+$title = 'La Maison ADA - Héritage & Savoir-faire'; 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -37,14 +37,14 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
             letter-spacing: 0.02em;
         }
         
-        /* --- HEADER STYLES (INTÃ‰GRÃ‰S) --- */
+        /* --- HEADER STYLES (INTÉGRÉS) --- */
         #main-header {
             background-color: #ffffff !important;
             border-bottom: 1px solid #f3f3f3;
             color: #000000 !important;
             transition: all 0.3s ease;
         }
-        /* Force les Ã©lÃ©ments du header en noir */
+        /* Force les éléments du header en noir */
         #main-header a, #main-header span, #main-header button, #main-header i {
             color: #000000 !important;
         }
@@ -183,15 +183,15 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
     </header>
 
     <div class="max-w-[1400px] mx-auto px-6 text-center mt-10">
-        <h1 class="text-4xl md:text-5xl mb-12">ADA France prÃ©sentÃ© par Yanis et Nathan,</h1>
+        <h1 class="text-4xl md:text-5xl mb-12">ADA France présenté par Yanis et Nathan,</h1>
         
         <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-24 border-b border-gray-100 pb-8">
-            <a href="#propos" class="nav-link">Ã€ propos</a>
-            <a href="#histoire" class="nav-link">HÃ©ritage</a>
+            <a href="#propos" class="nav-link">À propos</a>
+            <a href="#histoire" class="nav-link">Héritage</a>
             <a href="#agences" class="nav-link">Nos Agences</a>
-            <a href="{{ route('carrieres') }}" class="nav-link">CarriÃ¨res</a>
+            <a href="{{ route('carrieres') }}" class="nav-link">Carrières</a>
             <a href="#franchise" class="nav-link">Franchise</a>
-            <a href="#actualites" class="nav-link">ActualitÃ©s</a>
+            <a href="#actualites" class="nav-link">Actualités</a>
         </div>
     </div>
 
@@ -201,7 +201,7 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
                 <img src="images/application_ADA_carre_a9ff601444.webp" class="w-full h-full object-cover">
                 <div class="absolute bottom-10 left-10 text-white">
                     <span class="text-xs uppercase tracking-[0.3em] block mb-2">Vision</span>
-                    <h3 class="text-3xl">ProximitÃ© & LibertÃ©.</h3>
+                    <h3 class="text-3xl">Proximité & Liberté.</h3>
                 </div>
             </div>
             
@@ -211,10 +211,10 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
                 
                 <div class="text-gray-600 font-light leading-relaxed space-y-6 text-lg">
                     <p>
-                        ADA Å“uvre chaque jour pour rapprocher les FranÃ§ais grÃ¢ce Ã  une offre de mobilitÃ© accessible Ã  tous, Ã  travers un rÃ©seau dâ€™entrepreneurs prÃ©sents sur tout le territoire.
+                        ADA œuvre chaque jour pour rapprocher les Français grâce à une offre de mobilité accessible à tous, à travers un réseau d’entrepreneurs présents sur tout le territoire.
                     </p>
                     <p>
-                        Depuis sa crÃ©ation en 1984, ADA relÃ¨ve le dÃ©fi de surprendre jour aprÃ¨s jour ses clients avec une raison dâ€™Ãªtre simple et forte : <strong>dÃ©mocratiser lâ€™accÃ¨s Ã  la mobilitÃ©</strong> dans les territoires.
+                        Depuis sa création en 1984, ADA relève le défi de surprendre jour après jour ses clients avec une raison d’être simple et forte : <strong>démocratiser l’accès à la mobilité</strong> dans les territoires.
                     </p>
                 </div>
             </div>
@@ -225,8 +225,8 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
         <div class="max-w-[1000px] mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Chronologie</span>
-                <h2 class="text-4xl mt-3">Les grandes Ã©tapes.</h2>
-                <p class="text-gray-500 mt-4">DÃ©couvrez les Ã©vÃ©nements marquants et emblÃ©matiques du Groupe Ada.</p>
+                <h2 class="text-4xl mt-3">Les grandes étapes.</h2>
+                <p class="text-gray-500 mt-4">Découvrez les événements marquants et emblématiques du Groupe Ada.</p>
             </div>
 
             <div class="pl-4 md:pl-0">
@@ -234,35 +234,35 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
                     <div class="timeline-marker"></div>
                     <div class="timeline-year">1984</div>
                     <h3 class="text-lg font-bold mb-2">L'Origine</h3>
-                    <p class="text-gray-600 font-light max-w-2xl">Le concept de la Â« location Ã  prix discount Â» canadien franchit lâ€™Atlantique. Jean-Yves Vigouroux ouvre une premiÃ¨re agence ADA Ã  Brest.</p>
+                    <p class="text-gray-600 font-light max-w-2xl">Le concept de la « location à prix discount » canadien franchit l’Atlantique. Jean-Yves Vigouroux ouvre une première agence ADA à Brest.</p>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-year">1992</div>
                     <h3 class="text-lg font-bold mb-2">L'Expansion</h3>
-                    <p class="text-gray-600 font-light max-w-2xl">Avec lâ€™entrÃ©e du Groupe G7 (Groupe Rousselet) dans son capital, ADA passe Ã  la vitesse supÃ©rieure.</p>
+                    <p class="text-gray-600 font-light max-w-2xl">Avec l’entrée du Groupe G7 (Groupe Rousselet) dans son capital, ADA passe à la vitesse supérieure.</p>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-year">2008</div>
                     <h3 class="text-lg font-bold mb-2">Innovation</h3>
-                    <p class="text-gray-600 font-light max-w-2xl">Lancement d'une offre innovante dâ€™auto-partage : avec ADA Malin, ADA propose la location Ã  lâ€™heure avant tout le monde.</p>
+                    <p class="text-gray-600 font-light max-w-2xl">Lancement d'une offre innovante d’auto-partage : avec ADA Malin, ADA propose la location à l’heure avant tout le monde.</p>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-year">2016 â€“ 2017</div>
+                    <div class="timeline-year">2016 – 2017</div>
                     <h3 class="text-lg font-bold mb-2">Digitalisation & Services</h3>
-                    <p class="text-gray-600 font-light max-w-2xl">Lancement de demenager.fr et de lâ€™enseigne ADA Express : vÃ©hicules en libre-service 24h/24 via mobile.</p>
+                    <p class="text-gray-600 font-light max-w-2xl">Lancement de demenager.fr et de l’enseigne ADA Express : véhicules en libre-service 24h/24 via mobile.</p>
                 </div>
 
                 <div class="timeline-item border-l-0">
                     <div class="timeline-marker"></div>
                     <div class="timeline-year">2022</div>
                     <h3 class="text-lg font-bold mb-2">1000 Points de vente</h3>
-                    <p class="text-gray-600 font-light max-w-2xl">Le rÃ©seau compte dÃ©sormais 1000 points de vente en France, un maillage inÃ©galÃ©.</p>
+                    <p class="text-gray-600 font-light max-w-2xl">Le réseau compte désormais 1000 points de vente en France, un maillage inégalé.</p>
                 </div>
             </div>
         </div>
@@ -270,22 +270,22 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
 
     <div id="agences" class="max-w-[1400px] mx-auto px-6 mb-32">
         <div class="text-center md:text-left mb-6">
-            <span class="text-xs uppercase tracking-widest text-gray-500 block mb-2">Le RÃ©seau</span>
+            <span class="text-xs uppercase tracking-widest text-gray-500 block mb-2">Le Réseau</span>
             <h2 class="text-3xl md:text-4xl mb-2">Nos Adresses d'Exception.</h2>
-            <p class="text-gray-600 mb-10">Un rÃ©seau de professionnels enracinÃ© dans les territoires.</p>
+            <p class="text-gray-600 mb-10">Un réseau de professionnels enraciné dans les territoires.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             
             <a href="{{ route('agence.details', 1) }}" class="group cursor-pointer block">
                 <div class="w-full aspect-[4/5] md:aspect-[1.2/1] mb-4 overflow-hidden">
-                    <img src="{{ asset('images/macon.jpg') }}" alt="Agence MÃ¢con" class="w-full h-full object-cover">
+                    <img src="{{ asset('images/macon.jpg') }}" alt="Agence Mâcon" class="w-full h-full object-cover">
                 </div>
                 <div class="text-left">
                     <span class="text-xs font-bold uppercase tracking-wide">Bourgogne</span>
-                    <h3 class="text-xl mt-1 mb-1">Agence MÃ¢con Centre</h3>
-                    <p class="text-xs text-gray-500 mb-4">26 Rue de la RÃ©publique â€¢ Professionnel de confiance</p>
-                    <span class="text-xs font-bold border-b border-gray-300 pb-1 group-hover:border-black transition-colors">DÃ‰COUVRIR</span>
+                    <h3 class="text-xl mt-1 mb-1">Agence Mâcon Centre</h3>
+                    <p class="text-xs text-gray-500 mb-4">26 Rue de la République • Professionnel de confiance</p>
+                    <span class="text-xs font-bold border-b border-gray-300 pb-1 group-hover:border-black transition-colors">DÉCOUVRIR</span>
                 </div>
             </a>
 
@@ -295,9 +295,9 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
                 </div>
                 <div class="text-left">
                     <span class="text-xs font-bold uppercase tracking-wide">Bourgogne</span>
-                    <h3 class="text-xl mt-1 mb-1">Agence Chalon-sur-SaÃ´ne</h3>
-                    <p class="text-xs text-gray-500 mb-4">12 Avenue Jean JaurÃ¨s â€¢ Service de proximitÃ©</p>
-                    <span class="text-xs font-bold border-b border-gray-300 pb-1 group-hover:border-black transition-colors">DÃ‰COUVRIR</span>
+                    <h3 class="text-xl mt-1 mb-1">Agence Chalon-sur-Saône</h3>
+                    <p class="text-xs text-gray-500 mb-4">12 Avenue Jean Jaurès • Service de proximité</p>
+                    <span class="text-xs font-bold border-b border-gray-300 pb-1 group-hover:border-black transition-colors">DÉCOUVRIR</span>
                 </div>
             </a>
 
@@ -314,20 +314,20 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
                 
                 <div>
                     <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 block">Talents</span>
-                    <h2 class="text-3xl md:text-4xl mb-6">CarriÃ¨re chez ADA.</h2>
+                    <h2 class="text-3xl md:text-4xl mb-6">Carrière chez ADA.</h2>
                     <p class="text-gray-400 font-light leading-relaxed mb-8">
-                        Pour dÃ©marrer lâ€™aventure ADA, Ã§a se passe ici ! Nous sommes constamment Ã  la recherche de nouveaux talents motivÃ©s.
+                        Pour démarrer l’aventure ADA, ça se passe ici ! Nous sommes constamment à la recherche de nouveaux talents motivés.
                     </p>
                     <a href="{{ route('carrieres') }}" class="inline-block border-b border-white pb-1 text-sm hover:text-gray-300 transition-colors">Voir nos offres d'emploi</a>
                 </div>
 
                 <div id="franchise" class="border-t md:border-t-0 md:border-l border-gray-800 pt-12 md:pt-0 md:pl-16">
                     <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 block">Entreprendre</span>
-                    <h2 class="text-3xl md:text-4xl mb-6">Devenez FranchisÃ©.</h2>
+                    <h2 class="text-3xl md:text-4xl mb-6">Devenez Franchisé.</h2>
                     <p class="text-gray-400 font-light leading-relaxed mb-8">
-                        Envie dâ€™ouvrir une franchise ou une licence ? Devenez acteur de la mobilitÃ© de demain avec le Groupe Ada.
+                        Envie d’ouvrir une franchise ou une licence ? Devenez acteur de la mobilité de demain avec le Groupe Ada.
                     </p>
-                    <a href="#" class="btn-lv bg-white text-black border-white hover:bg-gray-200">Devenir FranchisÃ©</a>
+                    <a href="#" class="btn-lv bg-white text-black border-white hover:bg-gray-200">Devenir Franchisé</a>
                 </div>
             </div>
         </div>
@@ -335,7 +335,7 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
 
     <div id="actualites" class="max-w-[1000px] mx-auto px-6 mb-32 text-center">
         <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 block">Espace Presse</span>
-        <h2 class="text-3xl md:text-4xl mb-8">Les derniÃ¨res ActualitÃ©s.</h2>
+        <h2 class="text-3xl md:text-4xl mb-8">Les dernières Actualités.</h2>
 
         <div class="bg-gray-50 p-8 md:p-12 mb-12 text-left flex flex-col md:flex-row gap-8 items-center">
             <div class="w-full md:w-1/3 aspect-video bg-gray-200 overflow-hidden">
@@ -344,20 +344,20 @@ $title = 'La Maison ADA - HÃ©ritage & Savoir-faire';
             <div class="flex-1">
                 <h3 class="text-xl font-bold mb-3">Partenariat Charge-In</h3>
                 <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                    Ada a signÃ© un partenariat stratÃ©gique avec Charge-in pour l'installation de bornes de recharge, facilitant le dÃ©veloppement de sa flotte Ã©lectrifiÃ©e.
+                    Ada a signé un partenariat stratégique avec Charge-in pour l'installation de bornes de recharge, facilitant le développement de sa flotte électrifiée.
                 </p>
-                <a href="#" class="text-xs font-bold underline">Lire le communiquÃ©</a>
+                <a href="#" class="text-xs font-bold underline">Lire le communiqué</a>
             </div>
         </div>
 
         <div class="border-t border-gray-100 pt-16">
             <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-4 block">Newsletter</span>
-            <h3 class="text-2xl mb-8">Restez informÃ© des innovations ADA.</h3>
+            <h3 class="text-2xl mb-8">Restez informé des innovations ADA.</h3>
             <button class="btn-lv">S'abonner</button>
         </div>
     </div>
 
-    @include('partials.footer')
+    @include('layouts.footer')
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php 
 $title = 'Collection - ADA'; 
 if (function_exists('resource_path')) {
-    require resource_path('views/partials/header.php'); 
+    require resource_path('views/layouts/header.blade.php'); 
 }
 
 // --- LOGIQUE BACKEND (FILTRES) ---

@@ -4,7 +4,7 @@ $title = 'Location de véhicules - ADA';
 
 // On charge le header partiel si la fonction existe (pour Laravel)
 if (function_exists('resource_path')) {
-    require resource_path('views/partials/header.php');
+    require resource_path('views/layouts/header.blade.php');
 }
 
 // DONNÉES DE DÉMO

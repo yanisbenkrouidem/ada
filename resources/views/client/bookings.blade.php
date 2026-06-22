@@ -1,4 +1,4 @@
-@extends('base')
+@extends('layouts.app')
 
 @section('title', 'Mes Locations - Espace Client')
 

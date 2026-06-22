@@ -82,7 +82,7 @@
     <div id="sidebar-overlay" onclick="closeAllSidebars()" class="sidebar-overlay"></div>
 
     {{-- HEADER --}}
-    @include('partials.header') 
+    @include('layouts.header') 
 
     {{-- CONTENU PRINCIPAL --}}
     <main>
