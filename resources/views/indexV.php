@@ -495,91 +495,6 @@ $heroImage2 = function_exists('asset') ? asset('images/williamsreunauly.jpg') : 
         </div>
     </section>
 
-    <div class="relative z-40 bg-white w-full">
-        <div class="w-full bg-white pb-10 px-0 pt-16 overflow-hidden">
-            <div class="text-center mb-10 px-4">
-                 <h2 class="text-xl md:text-3xl font-normal text-black tracking-normal" style="font-family: 'Inter', sans-serif;">Explorez notre gamme de véhicules</h2>
-            </div>
-
-            <div class="lv-marquee-wrapper mb-8">
-                <div class="lv-marquee-track">
-                    <?php for($i=0; $i<3; $i++): ?>
-                        <?php foreach($tourisme as $voiture): ?>
-                            <a href="#" class="lv-carousel-item flex flex-col items-center">
-                                <div class="w-full aspect-square overflow-hidden mb-5 bg-[#f5f5f5]">
-                                    <img src="<?php echo $voiture['photo']; ?>" class="w-full h-full object-cover">
-                                </div>
-                                <div class="text-center px-2">
-                                    <p class="text-[13px] font-medium tracking-wide text-black whitespace-normal uppercase mb-1"><?php echo $voiture['libelle']; ?></p>
-                                    <p class="text-[10px] text-gray-500"><?php echo $voiture['exemple']; ?></p>
-                                </div>
-                            </a>
-                        <?php endforeach; ?>
-                    <?php endfor; ?>
-                </div>
-            </div>
-            
-            <div class="max-w-[1440px] mx-auto px-0 md:px-12 py-12">
-                <div class="text-center mb-12 px-4">
-                    <h2 class="text-2xl md:text-3xl text-black mb-4" style="font-family: 'FuturaLT', sans-serif;">Les Services ADA</h2>
-                    <p class="text-gray-500 text-[10px] md:text-xs max-w-2xl mx-auto leading-relaxed">Découvrez nos solutions adaptées à tous vos besoins de mobilité.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-12 px-4">
-                     <div class="flex flex-col items-center group cursor-pointer" onclick="openServiceModal('modal-lld')">
-                        <div class="w-full aspect-[4/5] overflow-hidden mb-6 relative">
-                            <img src="<?php echo function_exists('asset') ? asset('images/9b3a652548_uid_65d8652a63005.webp') : 'images/quali.jpg'; ?>" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-lg text-black mb-3">Abonnement Auto</h3>
-                    </div>
-                    <div class="flex flex-col items-center group cursor-pointer" onclick="openServiceModal('modal-gift')">
-                        <div class="w-full aspect-[4/5] overflow-hidden mb-6 relative">
-                            <img src="<?php echo function_exists('asset') ? asset('images/bd18ff8cdd_uid_65d87a5ea3127.jpg') : 'images/peugeot3.webp'; ?>" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-lg text-black mb-3">Carte Cadeau</h3>
-                    </div>
-                    <div class="flex flex-col items-center group cursor-pointer" onclick="openServiceModal('modal-options')">
-                        <div class="w-full aspect-[4/5] overflow-hidden mb-6 relative">
-                            <img src="<?php echo function_exists('asset') ? asset('images/ead2e02571_uid_65d87a60c0c29.jpeg') : 'images/clubada.jpg'; ?>" class="w-full h-full object-cover">
-                        </div>
-                        <h3 class="text-lg text-black mb-3">Options & Accessoires</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 py-8 md:py-12 space-y-12">
-                <div class="relative w-screen left-1/2 -ml-[50vw] -mr-[50vw] right-1/2">
-                    <img src="<?php echo function_exists('asset') ? asset('images/34c63359cd-1_uid_65d874c27cf36.jpg') : 'images/renaulltt.jpeg'; ?>" alt="Bannière" class="w-full h-[250px] md:h-[500px] object-cover">
-                </div>
-            </div> 
-            
-            <div class="lv-marquee-wrapper">
-                <div class="lv-marquee-track">
-                    <?php for($i=0; $i<3; $i++): ?>
-                        <?php foreach($utilitaires as $camion): ?>
-                            <a href="#" class="lv-carousel-item flex flex-col items-center">
-                                <div class="w-full aspect-square overflow-hidden mb-5 bg-[#f5f5f5]">
-                                    <img src="<?php echo $camion['photo']; ?>" class="w-full h-full object-cover">
-                                </div>
-                                <div class="text-center px-2">
-                                    <p class="text-[13px] font-medium tracking-wide text-black whitespace-normal uppercase mb-1"><?php echo $camion['libelle']; ?></p>
-                                    <p class="text-[10px] text-gray-500"><?php echo $camion['exemple']; ?></p>
-                                </div>
-                            </a>
-                        <?php endforeach; ?>
-                    <?php endfor; ?>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <main class="nike-section w-full pb-20">
-        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 py-8 md:py-12 space-y-12">
-            <div class="relative w-screen left-1/2 -ml-[50vw] -mr-[50vw] right-1/2">
-                <img src="<?php echo function_exists('asset') ? asset('images/18427ecd54.webp') : 'images/renaulltt.jpeg'; ?>" alt="Bannière" class="w-full h-[250px] md:h-[500px] object-cover">
-            </div>
-        </div> 
-    </main>
-
     <div id="modal-lld" class="modal-overlay z-[10000]">
         <div class="modal-content text-center py-10 px-8 max-w-[90vw] md:max-w-[600px] liquid-card">
             <span onclick="closeModal('modal-lld')" class="close-modal text-white text-3xl absolute top-4 right-6 cursor-pointer">&times;</span>
@@ -930,4 +845,3 @@ async function handleClub(e) {
 
 </body>
 </html>
-<?php if (function_exists('resource_path')) { require resource_path('views/partials/footer.php'); } ?>
