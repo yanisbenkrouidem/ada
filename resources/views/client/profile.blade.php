@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon profil Ada</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +47,7 @@
 
     {{-- LOGIQUE DE GAMIFICATION (FRONT-END) --}}
     <?php
-        // Définition des paliers
+        // DÃ©finition des paliers
         $tiers = [
             ['name' => 'Membre', 'limit' => 0, 'icon' => 'fa-user'],
             ['name' => 'Silver', 'limit' => 1000, 'icon' => 'fa-medal'],
@@ -81,7 +82,7 @@
         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-r from-[#5C0632]/90 via-[#5C0632]/30 to-transparent"></div>
         <div class="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center pb-8">
-            <h1 class="text-4xl text-white font-light tracking-wide drop-shadow-md">Gérer votre profil</h1>
+            <h1 class="text-4xl text-white font-light tracking-wide drop-shadow-md">GÃ©rer votre profil</h1>
         </div>
         <div class="custom-shape-divider-bottom-16">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path></svg>
@@ -123,7 +124,7 @@
 
                         @if($nextTier)
                             <p class="text-xs text-center text-white/80">
-                                Plus que <span class="font-bold text-white">{{ number_format($pointsNeeded, 0, ',', ' ') }} pts</span> pour débloquer le statut {{ $nextTier['name'] }} !
+                                Plus que <span class="font-bold text-white">{{ number_format($pointsNeeded, 0, ',', ' ') }} pts</span> pour dÃ©bloquer le statut {{ $nextTier['name'] }} !
                             </p>
                         @endif
                     </div>
@@ -151,7 +152,7 @@
                                         {{ $tier['name'] }}
                                         @if($index == $currentTierIndex) <span class="text-[9px] bg-white text-ada-red px-1.5 py-0.5 rounded font-bold">ACTUEL</span> @endif
                                     </p>
-                                    <p class="text-[10px] text-white/60">Dès {{ number_format($tier['limit'], 0, ',', ' ') }} pts</p>
+                                    <p class="text-[10px] text-white/60">DÃ¨s {{ number_format($tier['limit'], 0, ',', ' ') }} pts</p>
                                 </div>
                                 <i class="fa-solid {{ $tier['icon'] }} text-lg {{ $isReached ? 'text-yellow-400' : 'text-white' }}"></i>
                             </div>
@@ -165,7 +166,7 @@
                         </div>
                         <div class="text-center border-l border-white/10">
                             <span class="block text-2xl font-bold text-yellow-400">{{ number_format($points, 0, ',', ' ') }}</span>
-                            <span class="text-[10px] uppercase text-white/50">Points Cumulés</span>
+                            <span class="text-[10px] uppercase text-white/50">Points CumulÃ©s</span>
                         </div>
                     </div>
 
@@ -181,7 +182,7 @@
                         <i class="fa-regular fa-credit-card text-lg"></i><span class="text-[10px] font-bold uppercase tracking-widest hidden md:inline">Paiement</span>
                     </button>
                     <button onclick="switchTab('preferences')" id="tab-preferences" class="tab-btn flex-1 py-5 border-b-4 border-transparent text-gray-400 flex flex-col items-center gap-1.5 hover:bg-white hover:text-gray-600 transition-colors">
-                        <i class="fa-solid fa-sliders text-lg"></i><span class="text-[10px] font-bold uppercase tracking-widest hidden md:inline">Préférences</span>
+                        <i class="fa-solid fa-sliders text-lg"></i><span class="text-[10px] font-bold uppercase tracking-widest hidden md:inline">PrÃ©fÃ©rences</span>
                     </button>
                     <button onclick="switchTab('famille')" id="tab-famille" class="tab-btn flex-1 py-5 border-b-4 border-transparent text-gray-400 flex flex-col items-center gap-1.5 hover:bg-white hover:text-gray-600 transition-colors">
                         <i class="fa-solid fa-users text-lg"></i><span class="text-[10px] font-bold uppercase tracking-widest hidden md:inline">Famille</span>
@@ -198,7 +199,7 @@
                     @endif
 
                     <div id="content-infos" class="tab-content active">
-                        <h3 class="text-3xl font-light text-ada-red mb-2">À propos de vous</h3>
+                        <h3 class="text-3xl font-light text-ada-red mb-2">Ã€ propos de vous</h3>
                         <div class="mb-8 flex items-center gap-4 bg-gray-50 p-4 rounded-lg border border-gray-100">
                              <div class="relative w-12 h-12">
                                 <svg class="w-full h-full" viewBox="0 0 100 100">
@@ -210,11 +211,11 @@
                                 <span class="absolute inset-0 flex items-center justify-center text-[10px] font-bold">{{ round($progress) }}%</span>
                              </div>
                              <div>
-                                 <p class="text-sm font-bold text-gray-800">Complétion du profil</p>
+                                 <p class="text-sm font-bold text-gray-800">ComplÃ©tion du profil</p>
                                  @if(!empty($objectives))
                                      <p class="text-xs text-red-500">Manquant : {{ $objectives[0] }}</p>
                                  @else
-                                     <p class="text-xs text-green-500">Profil à jour !</p>
+                                     <p class="text-xs text-green-500">Profil Ã  jour !</p>
                                  @endif
                              </div>
                         </div>
@@ -222,10 +223,10 @@
                         <form action="{{ route('client.profile.update') }}" method="POST">
                             @csrf
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Prénom</label><input type="text" name="prenom" value="{{ ucfirst(strtolower($client->prenom)) }}" class="input-profile w-full p-3 rounded-md"></div>
+                                <div><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">PrÃ©nom</label><input type="text" name="prenom" value="{{ ucfirst(strtolower($client->prenom)) }}" class="input-profile w-full p-3 rounded-md"></div>
                                 <div><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Nom</label><input type="text" name="nom" value="{{ strtoupper($client->nom) }}" class="input-profile w-full p-3 rounded-md"></div>
                                 <div class="col-span-2"><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Email</label><input type="email" name="email" value="{{ $client->email }}" class="input-profile w-full p-3 rounded-md"></div>
-                                <div><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Téléphone</label><input type="text" name="telephone" value="{{ $client->telephone }}" placeholder="06..." class="input-profile w-full p-3 rounded-md"></div>
+                                <div><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">TÃ©lÃ©phone</label><input type="text" name="telephone" value="{{ $client->telephone }}" placeholder="06..." class="input-profile w-full p-3 rounded-md"></div>
                                 <div><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Ville</label><input type="text" name="ville" value="{{ $client->ville }}" placeholder="Paris..." class="input-profile w-full p-3 rounded-md"></div>
                                 <div class="col-span-2"><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Adresse</label><input type="text" name="adresse" value="{{ $client->adresse }}" placeholder="12 rue de..." class="input-profile w-full p-3 rounded-md"></div>
                             </div>
@@ -247,7 +248,7 @@
                                 </form>
                                 <div class="absolute bottom-4 right-4 opacity-30"><i class="fa-brands fa-cc-{{ strtolower($card->brand) }} text-4xl"></i></div>
                                 <p class="text-xs uppercase opacity-60 mb-6">{{ $card->brand }}</p>
-                                <p class="text-xl font-mono tracking-widest mb-6">•••• •••• •••• {{ $card->last_four }}</p>
+                                <p class="text-xl font-mono tracking-widest mb-6">â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ {{ $card->last_four }}</p>
                                 <div class="flex justify-between items-end">
                                     <p class="text-xs opacity-70">{{ strtoupper($client->nom) }}</p>
                                     <p class="text-sm font-bold">{{ $card->expiry_date }}</p>
@@ -262,7 +263,7 @@
                     </div>
 
                     <div id="content-preferences" class="tab-content">
-                        <h3 class="text-3xl font-light text-ada-red mb-6">Préférences</h3>
+                        <h3 class="text-3xl font-light text-ada-red mb-6">PrÃ©fÃ©rences</h3>
                         <form action="{{ route('client.preferences.update') }}" method="POST" class="space-y-4">
                             @csrf
                             <label class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors">
@@ -270,7 +271,7 @@
                                 <input type="checkbox" name="newsletter" class="accent-ada-red h-5 w-5" {{ $client->newsletter_optin ? 'checked' : '' }}>
                             </label>
                             <label class="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors">
-                                <div><span class="block font-bold text-sm">SMS Notifications</span><span class="text-xs text-gray-500">Suivi de réservation en temps réel.</span></div>
+                                <div><span class="block font-bold text-sm">SMS Notifications</span><span class="text-xs text-gray-500">Suivi de rÃ©servation en temps rÃ©el.</span></div>
                                 <input type="checkbox" name="sms" class="accent-ada-red h-5 w-5" {{ $client->sms_optin ? 'checked' : '' }}>
                             </label>
                             <div class="pt-4"><button type="submit" class="bg-ada-red text-white px-6 py-2 rounded-md font-bold text-xs uppercase hover:bg-black transition-colors">Enregistrer</button></div>
@@ -299,7 +300,7 @@
                             <h4 class="font-bold text-sm mb-4">Ajouter un proche</h4>
                             <form action="{{ route('client.family.add') }}" method="POST" class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 @csrf
-                                <input type="text" name="prenom" placeholder="Prénom" class="input-profile p-2 rounded text-sm" required>
+                                <input type="text" name="prenom" placeholder="PrÃ©nom" class="input-profile p-2 rounded text-sm" required>
                                 <input type="text" name="nom" placeholder="Nom" class="input-profile p-2 rounded text-sm" required>
                                 <select name="relation" class="input-profile p-2 rounded text-sm">
                                     <option value="Conjoint">Conjoint(e)</option>
@@ -323,7 +324,7 @@
             <h3 class="text-xl font-bold mb-4 text-gray-800">Ajouter une carte</h3>
             <form action="{{ route('client.card.add') }}" method="POST" class="space-y-4">
                 @csrf
-                <div><label class="text-xs font-bold uppercase text-gray-500">Numéro</label><input type="text" name="number" placeholder="0000 0000 0000 0000" class="input-profile w-full p-3 rounded" maxlength="16" required></div>
+                <div><label class="text-xs font-bold uppercase text-gray-500">NumÃ©ro</label><input type="text" name="number" placeholder="0000 0000 0000 0000" class="input-profile w-full p-3 rounded" maxlength="16" required></div>
                 <div class="grid grid-cols-2 gap-4">
                     <div><label class="text-xs font-bold uppercase text-gray-500">Date (MM/YY)</label><input type="text" name="expiry" placeholder="12/26" class="input-profile w-full p-3 rounded" maxlength="5" required></div>
                     <div><label class="text-xs font-bold uppercase text-gray-500">CVV</label><input type="text" name="cvv" placeholder="123" class="input-profile w-full p-3 rounded" maxlength="3" required></div>

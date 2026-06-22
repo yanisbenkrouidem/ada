@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmation ADA Location</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     <style>
         /* RESET & BASE */
         body { margin: 0; padding: 0; background-color: #F4F5F9; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
@@ -15,7 +16,7 @@
         .wrapper { width: 100%; table-layout: fixed; background-color: #F4F5F9; padding-bottom: 40px; }
         .main-table { background-color: #ffffff; margin: 0 auto; width: 100%; max-width: 600px; border-spacing: 0; font-family: sans-serif; color: #333333; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-radius: 16px; overflow: hidden; }
         
-        /* HEADER AVEC TON GRADIENT ADA SPÉCIFIQUE */
+        /* HEADER AVEC TON GRADIENT ADA SPÃ‰CIFIQUE */
         .header { 
             background: linear-gradient(135deg, #990033 0%, #5C0632 60%, #2E0219 100%); 
             padding: 40px 40px; 
@@ -104,7 +105,7 @@
             <tr>
                 <td class="header">
                     <div style="font-family: 'Times New Roman', serif; color: white; font-size: 32px; letter-spacing: 2px; font-weight: bold;">ADA</div>
-                    <div style="color: rgba(255,255,255,0.8); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; margin-top: 5px;">Location de véhicules</div>
+                    <div style="color: rgba(255,255,255,0.8); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; margin-top: 5px;">Location de vÃ©hicules</div>
                 </td>
             </tr>
 
@@ -113,10 +114,10 @@
                     <span class="subtitle">Notification Officielle</span>
                     <h1>Bonjour,</h1>
                     
-                    <p>Nous avons bien reçu votre demande concernant : <strong>{{ $contexte }}</strong>.</p>
+                    <p>Nous avons bien reÃ§u votre demande concernant : <strong>{{ $contexte }}</strong>.</p>
 
                     @if(str_contains(strtolower($contexte), 'club'))
-                        <p>Bienvenue dans le cercle privilégié des conducteurs ADA. Votre adhésion au <strong>Club</strong> est confirmée. Vous bénéficiez désormais de la priorité en agence et du surclassement offert selon disponibilité.</p>
+                        <p>Bienvenue dans le cercle privilÃ©giÃ© des conducteurs ADA. Votre adhÃ©sion au <strong>Club</strong> est confirmÃ©e. Vous bÃ©nÃ©ficiez dÃ©sormais de la prioritÃ© en agence et du surclassement offert selon disponibilitÃ©.</p>
                         
                         <div class="virtual-card">
                             <div class="card-top">
@@ -137,15 +138,15 @@
                             </table>
                         </div>
                         
-                        <p style="font-size: 13px; color: #777;">Présentez ce mail ou votre application lors de votre prochain retrait de véhicule pour activer vos avantages.</p>
+                        <p style="font-size: 13px; color: #777;">PrÃ©sentez ce mail ou votre application lors de votre prochain retrait de vÃ©hicule pour activer vos avantages.</p>
 
                     @else
-                        <p>Merci de rejoindre notre communauté. Vous êtes désormais inscrit à notre lettre d'information.</p>
-                        <p>Soyez prêt à partir : vous recevrez prochainement nos meilleures offres de location pour vos week-ends et déménagements, directement dans votre boîte mail.</p>
+                        <p>Merci de rejoindre notre communautÃ©. Vous Ãªtes dÃ©sormais inscrit Ã  notre lettre d'information.</p>
+                        <p>Soyez prÃªt Ã  partir : vous recevrez prochainement nos meilleures offres de location pour vos week-ends et dÃ©mÃ©nagements, directement dans votre boÃ®te mail.</p>
                         
                         <div style="background: #FFF0F5; border-left: 4px solid #990033; padding: 15px; margin: 20px 0; font-size: 13px; color: #5C0632;">
                             <strong>Le saviez-vous ?</strong><br>
-                            En réservant 30 jours à l'avance, vous économisez en moyenne 20% sur la gamme Tourisme.
+                            En rÃ©servant 30 jours Ã  l'avance, vous Ã©conomisez en moyenne 20% sur la gamme Tourisme.
                         </div>
                     @endif
 
@@ -154,11 +155,11 @@
                     </div>
 
                     <div class="project-signature">
-                        <span class="tech-badge">Laravel 10 • SMTP • Mailable</span>
+                        <span class="tech-badge">Laravel 10 â€¢ SMTP â€¢ Mailable</span>
                         <p class="signature-text">
-                            Ce courriel est une démonstration technique réalisée par <strong>Yanis Benkrouidem</strong>.<br>
-                            Il s'inscrit dans le cadre du projet <strong>BTS SIO (Option SLAM)</strong> - Épreuve E4.<br>
-                            Aucune transaction commerciale réelle n'a été effectuée.
+                            Ce courriel est une dÃ©monstration technique rÃ©alisÃ©e par <strong>Yanis Benkrouidem</strong>.<br>
+                            Il s'inscrit dans le cadre du projet <strong>BTS SIO (Option SLAM)</strong> - Ã‰preuve E4.<br>
+                            Aucune transaction commerciale rÃ©elle n'a Ã©tÃ© effectuÃ©e.
                         </p>
                     </div>
                 </td>
@@ -166,8 +167,8 @@
             
             <tr>
                 <td class="footer">
-                    <p style="margin: 0;">© 2025 ADA Location (Projet Étudiant). Tous droits réservés.</p>
-                    <p style="margin: 5px 0 0 0; opacity: 0.6;">Ceci est un mail automatique, merci de ne pas répondre.</p>
+                    <p style="margin: 0;">Â© 2025 ADA Location (Projet Ã‰tudiant). Tous droits rÃ©servÃ©s.</p>
+                    <p style="margin: 5px 0 0 0; opacity: 0.6;">Ceci est un mail automatique, merci de ne pas rÃ©pondre.</p>
                 </td>
             </tr>
         </table>

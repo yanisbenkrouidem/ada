@@ -1,8 +1,8 @@
-<?php 
-$title = 'Rechercher un véhicule - Collection Complète'; 
+﻿<?php 
+$title = 'Rechercher un vÃ©hicule - Collection ComplÃ¨te'; 
 require resource_path('views/partials/header.php'); 
 
-// --- DONNÉES SIMULÉES (6 véhicules pour remplir la ligne) ---
+// --- DONNÃ‰ES SIMULÃ‰ES (6 vÃ©hicules pour remplir la ligne) ---
 $base_vehicules = [
     ['id' => 10, 'marque' => 'Renault', 'modele' => 'Twingo', 'prix' => 37, 'image' => asset('images/1A-sml.png'), 'tag' => 'Nouveau'],
     ['id' => 12, 'marque' => 'Fiat', 'modele' => '500', 'prix' => 47, 'image' => asset('images/7A-sml.png'), 'tag' => 'Nouveau'],
@@ -20,6 +20,7 @@ $inspirations_homme = array_merge(array_reverse($base_vehicules), array_slice($b
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title; ?></title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -49,12 +50,12 @@ $inspirations_homme = array_merge(array_reverse($base_vehicules), array_slice($b
 
         body { background-color: white; color: #191919; overflow-x: hidden; }
 
-        /* --- CORRECTIF NAVBAR ANIMÉE MAIS NOIRE --- */
+        /* --- CORRECTIF NAVBAR ANIMÃ‰E MAIS NOIRE --- */
         /* On utilise sticky pour qu'elle bouge avec le scroll, mais on force le NOIR */
         header, nav, .navbar, #header {
             background-color: #000000 !important; /* Fond Noir */
             color: #ffffff !important;             /* Texte Blanc */
-            position: sticky !important;           /* Reste accroché en haut (animation scroll) */
+            position: sticky !important;           /* Reste accrochÃ© en haut (animation scroll) */
             top: 0 !important;
             width: 100% !important;
             z-index: 100 !important;
@@ -92,12 +93,12 @@ $inspirations_homme = array_merge(array_reverse($base_vehicules), array_slice($b
                 <div class="pl-5 pr-3"><i class="fa-solid fa-magnifying-glass text-gray-900 text-xs"></i></div>
                 
                 <div class="flex-grow h-full flex items-center relative border-r border-gray-200">
-                    <input type="text" id="agence_display" placeholder="Agence de départ" readonly class="lv-input cursor-pointer px-4" onclick="openAgencyPopup()">
+                    <input type="text" id="agence_display" placeholder="Agence de dÃ©part" readonly class="lv-input cursor-pointer px-4" onclick="openAgencyPopup()">
                     <input type="hidden" name="agence_id" id="agence_id">
                 </div>
                 
                 <div class="w-[22%] h-full flex items-center border-r border-gray-200 pl-2">
-                    <input type="text" name="date_debut" id="date_debut" placeholder="Départ" class="lv-input cursor-pointer text-center" required>
+                    <input type="text" name="date_debut" id="date_debut" placeholder="DÃ©part" class="lv-input cursor-pointer text-center" required>
                 </div>
                 
                 <div class="w-[22%] h-full flex items-center pl-2">
@@ -144,7 +145,7 @@ $inspirations_homme = array_merge(array_reverse($base_vehicules), array_slice($b
                     <div class="pt-4 px-4 pb-8 bg-white h-[110px] flex flex-col justify-start">
                         <p class="text-[9px] text-gray-500 uppercase font-bold tracking-widest mb-1"><?php echo $vehicule['tag']; ?></p>
                         <h3 class="text-sm font-medium text-black mb-1"><?php echo $vehicule['marque'] . ' ' . $vehicule['modele']; ?></h3>
-                        <p class="text-sm text-black"><?php echo number_format($vehicule['prix'], 2, ',', ' '); ?>€</p>
+                        <p class="text-sm text-black"><?php echo number_format($vehicule['prix'], 2, ',', ' '); ?>â‚¬</p>
                     </div>
 
                 </div>
@@ -173,7 +174,7 @@ $inspirations_homme = array_merge(array_reverse($base_vehicules), array_slice($b
                     <div class="pt-4 px-4 pb-8 bg-white h-[110px] flex flex-col justify-start">
                         <p class="text-[9px] text-gray-500 uppercase font-bold tracking-widest mb-1"><?php echo $vehicule['tag']; ?></p>
                         <h3 class="text-sm font-medium text-black mb-1"><?php echo $vehicule['marque'] . ' ' . $vehicule['modele']; ?></h3>
-                        <p class="text-sm text-black"><?php echo number_format($vehicule['prix'], 2, ',', ' '); ?>€</p>
+                        <p class="text-sm text-black"><?php echo number_format($vehicule['prix'], 2, ',', ' '); ?>â‚¬</p>
                     </div>
 
                 </div>
@@ -196,9 +197,9 @@ $inspirations_homme = array_merge(array_reverse($base_vehicules), array_slice($b
         });
 
         function openAgencyPopup() {
-            const agences = { "1": "Paris - Champs Elysées", "2": "Lyon - Bellecour", "3": "Nice - Promenade" };
+            const agences = { "1": "Paris - Champs ElysÃ©es", "2": "Lyon - Bellecour", "3": "Nice - Promenade" };
             Swal.fire({
-                title: 'AGENCE', input: 'select', inputOptions: agences, inputPlaceholder: 'Sélectionner...',
+                title: 'AGENCE', input: 'select', inputOptions: agences, inputPlaceholder: 'SÃ©lectionner...',
                 showCancelButton: true, confirmButtonColor: '#000', cancelButtonColor: '#fff', confirmButtonText: 'VALIDER', cancelButtonText: 'ANNULER',
                 customClass: { popup: 'rounded-none', title: 'text-sm font-futura tracking-widest', confirmButton: 'rounded-none px-6 py-3 text-xs font-bold', cancelButton: 'rounded-none px-6 py-3 text-xs font-bold text-black border border-gray-200', input: 'rounded-none border-gray-300 focus:ring-0 text-xs' }
             }).then((r) => { if(r.value) { document.getElementById('agence_id').value = r.value; document.getElementById('agence_display').value = agences[r.value]; } });
@@ -213,7 +214,7 @@ $inspirations_homme = array_merge(array_reverse($base_vehicules), array_slice($b
 
         function showCarDetails(v) {
             Swal.fire({
-                html: `<div class="text-left"><div class="bg-[#f6f5f3] p-8 mb-6 flex justify-center"><img src="${v.image}" style="max-height:150px;"></div><h2 class="text-lg font-bold uppercase mb-1 font-futura tracking-widest">${v.marque} ${v.modele}</h2><p class="text-lg font-normal text-gray-900 mb-6">${v.prix}€ <span class="text-xs text-gray-500">/ jour</span></p></div>`,
+                html: `<div class="text-left"><div class="bg-[#f6f5f3] p-8 mb-6 flex justify-center"><img src="${v.image}" style="max-height:150px;"></div><h2 class="text-lg font-bold uppercase mb-1 font-futura tracking-widest">${v.marque} ${v.modele}</h2><p class="text-lg font-normal text-gray-900 mb-6">${v.prix}â‚¬ <span class="text-xs text-gray-500">/ jour</span></p></div>`,
                 showCancelButton: true, confirmButtonText: 'AJOUTER AU PANIER', cancelButtonText: 'FERMER', confirmButtonColor: '#000', width: 400, padding: '0',
                 customClass: { popup: 'rounded-none', htmlContainer: 'm-0 p-6', confirmButton: 'rounded-none w-full py-4 text-xs font-bold tracking-[0.2em] uppercase m-0', cancelButton: 'hidden' },
                 preConfirm: () => redirectToReservation(v.id)

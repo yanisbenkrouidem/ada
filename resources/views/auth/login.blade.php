@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion Admin - ADA</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <style>body { font-family: 'Schibsted Grotesk', sans-serif; background: #000; color: white; }</style>
@@ -18,7 +19,7 @@
         <div class="text-center mb-8">
             <img src="<?php echo asset('images/ADAlogo1.png'); ?>" class="h-8 mx-auto mb-6 filter invert opacity-80">
             <h1 class="text-2xl font-bold">Administration</h1>
-            <p class="text-gray-400 text-sm mt-2">Accès réservé au personnel.</p>
+            <p class="text-gray-400 text-sm mt-2">AccÃ¨s rÃ©servÃ© au personnel.</p>
         </div>
 
         <form action="<?php echo url('/login'); ?>" method="POST" class="space-y-5">

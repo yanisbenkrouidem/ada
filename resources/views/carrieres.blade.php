@@ -1,12 +1,13 @@
-<?php 
-$title = 'Carrières - ADA'; 
+﻿<?php 
+$title = 'CarriÃ¨res - ADA'; 
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADA Carrières</title>
+    <title>ADA CarriÃ¨res</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -158,8 +159,8 @@ $title = 'Carrières - ADA';
     <header class="header-jobs">
         <nav class="nav-left hidden md:block">
             <a href="<?php echo route('home'); ?>">La Maison</a>
-            <a href="#">Les Métiers</a>
-            <a href="#">Actualités</a>
+            <a href="#">Les MÃ©tiers</a>
+            <a href="#">ActualitÃ©s</a>
         </nav>
         <div class="absolute left-1/2 -translate-x-1/2 text-center">
             <div class="logo-main">ADA</div>
@@ -179,21 +180,21 @@ $title = 'Carrières - ADA';
                     
                     <div class="input-wrapper relative">
                         <i class="fa-solid fa-magnifying-glass icon-left"></i>
-                        <input type="text" id="search-keyword" placeholder="Poste, mot-clé..." autocomplete="off">
+                        <input type="text" id="search-keyword" placeholder="Poste, mot-clÃ©..." autocomplete="off">
                         <div class="suggestions-list" id="list-keyword">
                             </div>
                     </div>
 
                     <div class="input-wrapper relative">
                         <i class="fa-solid fa-location-dot icon-left"></i>
-                        <input type="text" id="search-location" placeholder="Ville ou Région" autocomplete="off" onfocus="showSuggestions('list-location')">
+                        <input type="text" id="search-location" placeholder="Ville ou RÃ©gion" autocomplete="off" onfocus="showSuggestions('list-location')">
                         <i class="fa-solid fa-chevron-down icon-chevron"></i>
                         <div class="suggestions-list" id="list-location">
-                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'Toute la France')">🌍 Toute la France</div>
-                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'Mâcon')">📍 <strong>Mâcon</strong> <small>Bourgogne</small></div>
-                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'Chalon-sur-Saône')">📍 <strong>Chalon-sur-Saône</strong> <small>Bourgogne</small></div>
-                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'Paris')">📍 Paris <small>Île-de-France</small></div>
-                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'Lyon')">📍 Lyon <small>Auvergne-Rhône-Alpes</small></div>
+                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'Toute la France')">ðŸŒ Toute la France</div>
+                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'MÃ¢con')">ðŸ“ <strong>MÃ¢con</strong> <small>Bourgogne</small></div>
+                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'Chalon-sur-SaÃ´ne')">ðŸ“ <strong>Chalon-sur-SaÃ´ne</strong> <small>Bourgogne</small></div>
+                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'Paris')">ðŸ“ Paris <small>ÃŽle-de-France</small></div>
+                            <div class="suggestion-item" onclick="setSearchParam('search-location', 'Lyon')">ðŸ“ Lyon <small>Auvergne-RhÃ´ne-Alpes</small></div>
                         </div>
                     </div>
 
@@ -211,24 +212,24 @@ $title = 'Carrières - ADA';
                 </div>
 
                 <div class="search-actions">
-                    <button class="btn-reset" onclick="resetSearch()" title="Réinitialiser"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button class="btn-reset" onclick="resetSearch()" title="RÃ©initialiser"><i class="fa-solid fa-rotate-right"></i></button>
                     <button class="btn-search-main" onclick="runSearch()">Rechercher</button>
                 </div>
             </div>
 
             <div class="quick-tags">
-                <div class="tag-pill-btn" onclick="quickSearch('', 'Mâcon', '')">📍 Postes à Mâcon</div>
-                <div class="tag-pill-btn" onclick="quickSearch('', 'Chalon', '')">📍 Postes à Chalon</div>
-                <div class="tag-pill-btn" onclick="quickSearch('', '', 'CDI')">📄 Tous les CDI</div>
-                <div class="tag-pill-btn" onclick="quickSearch('Manager', '', '')">👔 Management</div>
-                <div class="tag-pill-btn" onclick="quickSearch('Préparateur', '', '')">🚗 Flotte & Auto</div>
+                <div class="tag-pill-btn" onclick="quickSearch('', 'MÃ¢con', '')">ðŸ“ Postes Ã  MÃ¢con</div>
+                <div class="tag-pill-btn" onclick="quickSearch('', 'Chalon', '')">ðŸ“ Postes Ã  Chalon</div>
+                <div class="tag-pill-btn" onclick="quickSearch('', '', 'CDI')">ðŸ“„ Tous les CDI</div>
+                <div class="tag-pill-btn" onclick="quickSearch('Manager', '', '')">ðŸ‘” Management</div>
+                <div class="tag-pill-btn" onclick="quickSearch('PrÃ©parateur', '', '')">ðŸš— Flotte & Auto</div>
             </div>
         </div>
     </section>
 
     <div id="jobs-anchor" class="jobs-section">
         <div class="jobs-header">
-            <h2 class="jobs-title">Opportunités disponibles</h2>
+            <h2 class="jobs-title">OpportunitÃ©s disponibles</h2>
             <span class="jobs-count" id="jobs-counter">Chargement...</span>
         </div>
 
@@ -246,32 +247,32 @@ $title = 'Carrières - ADA';
         <div class="video-overlay"></div>
         <div class="video-content">
             <span class="text-xs uppercase tracking-[0.2em] mb-4 block">Inside ADA</span>
-            <h2 class="text-4xl mb-8 font-light">Découvrez le quotidien de nos équipes</h2>
-            <button class="border border-white px-8 py-3 rounded-full text-xs font-bold uppercase hover:bg-white hover:text-black transition">Voir la vidéo</button>
+            <h2 class="text-4xl mb-8 font-light">DÃ©couvrez le quotidien de nos Ã©quipes</h2>
+            <button class="border border-white px-8 py-3 rounded-full text-xs font-bold uppercase hover:bg-white hover:text-black transition">Voir la vidÃ©o</button>
         </div>
     </section>
 
     <footer class="py-10 text-center text-xs text-gray-400 border-t">
-        &copy; <?php echo date('Y'); ?> ADA France. Tous droits réservés.
+        &copy; <?php echo date('Y'); ?> ADA France. Tous droits rÃ©servÃ©s.
     </footer>
 
     <script>
-        /* --- 1. BASE DE DONNÉES SIMULÉE (OFFRES MÂCON & CHALON) --- */
+        /* --- 1. BASE DE DONNÃ‰ES SIMULÃ‰E (OFFRES MÃ‚CON & CHALON) --- */
         const jobsDB = [
-            { id: 1, title: "Responsable d'Agence", city: "Mâcon", region: "Bourgogne", type: "CDI", dept: "Management", date: "Il y a 2 jours" },
-            { id: 2, title: "Agent de Comptoir", city: "Chalon-sur-Saône", region: "Bourgogne", type: "CDD", dept: "Vente", date: "Aujourd'hui" },
-            { id: 3, title: "Préparateur de Véhicules", city: "Mâcon", region: "Bourgogne", type: "CDI", dept: "Opérations", date: "Il y a 3 jours" },
-            { id: 4, title: "Conseiller Commercial", city: "Chalon-sur-Saône", region: "Bourgogne", type: "Alternance", dept: "Vente", date: "Il y a 1 semaine" },
-            { id: 5, title: "Responsable Régional", city: "Lyon", region: "Auvergne", type: "CDI", dept: "Management", date: "Il y a 1 semaine" },
-            { id: 6, title: "Développeur Web Fullstack", city: "Paris (Siège)", region: "IDF", type: "CDI", dept: "Digital", date: "Il y a 3 jours" },
-            { id: 7, title: "Assistant(e) RH", city: "Paris (Siège)", region: "IDF", type: "Stage", dept: "Support", date: "Hier" },
-            { id: 8, title: "Chef de Parc Automobile", city: "Mâcon", region: "Bourgogne", type: "CDI", dept: "Opérations", date: "Il y a 1 mois" },
-            { id: 9, title: "Chargé de Clientèle", city: "Dijon", region: "Bourgogne", type: "CDD", dept: "Vente", date: "Il y a 2 semaines" },
-            { id: 10, title: "Comptable Fournisseurs", city: "Paris (Siège)", region: "IDF", type: "CDI", dept: "Finance", date: "Il y a 4 jours" },
+            { id: 1, title: "Responsable d'Agence", city: "MÃ¢con", region: "Bourgogne", type: "CDI", dept: "Management", date: "Il y a 2 jours" },
+            { id: 2, title: "Agent de Comptoir", city: "Chalon-sur-SaÃ´ne", region: "Bourgogne", type: "CDD", dept: "Vente", date: "Aujourd'hui" },
+            { id: 3, title: "PrÃ©parateur de VÃ©hicules", city: "MÃ¢con", region: "Bourgogne", type: "CDI", dept: "OpÃ©rations", date: "Il y a 3 jours" },
+            { id: 4, title: "Conseiller Commercial", city: "Chalon-sur-SaÃ´ne", region: "Bourgogne", type: "Alternance", dept: "Vente", date: "Il y a 1 semaine" },
+            { id: 5, title: "Responsable RÃ©gional", city: "Lyon", region: "Auvergne", type: "CDI", dept: "Management", date: "Il y a 1 semaine" },
+            { id: 6, title: "DÃ©veloppeur Web Fullstack", city: "Paris (SiÃ¨ge)", region: "IDF", type: "CDI", dept: "Digital", date: "Il y a 3 jours" },
+            { id: 7, title: "Assistant(e) RH", city: "Paris (SiÃ¨ge)", region: "IDF", type: "Stage", dept: "Support", date: "Hier" },
+            { id: 8, title: "Chef de Parc Automobile", city: "MÃ¢con", region: "Bourgogne", type: "CDI", dept: "OpÃ©rations", date: "Il y a 1 mois" },
+            { id: 9, title: "ChargÃ© de ClientÃ¨le", city: "Dijon", region: "Bourgogne", type: "CDD", dept: "Vente", date: "Il y a 2 semaines" },
+            { id: 10, title: "Comptable Fournisseurs", city: "Paris (SiÃ¨ge)", region: "IDF", type: "CDI", dept: "Finance", date: "Il y a 4 jours" },
             { id: 11, title: "Agent de Location", city: "Lyon", region: "Auvergne", type: "CDD", dept: "Vente", date: "Aujourd'hui" },
             { id: 12, title: "Manager Junior", city: "Bordeaux", region: "Aquitaine", type: "Alternance", dept: "Management", date: "Il y a 6 jours" },
-            { id: 13, title: "Mécanicien Flotte", city: "Mâcon", region: "Bourgogne", type: "CDI", dept: "Opérations", date: "Il y a 2 jours" },
-            { id: 14, title: "Responsable Adjoint", city: "Chalon-sur-Saône", region: "Bourgogne", type: "CDI", dept: "Management", date: "Hier" },
+            { id: 13, title: "MÃ©canicien Flotte", city: "MÃ¢con", region: "Bourgogne", type: "CDI", dept: "OpÃ©rations", date: "Il y a 2 jours" },
+            { id: 14, title: "Responsable Adjoint", city: "Chalon-sur-SaÃ´ne", region: "Bourgogne", type: "CDI", dept: "Management", date: "Hier" },
             { id: 15, title: "Stagiaire Marketing", city: "Paris", region: "IDF", type: "Stage", dept: "Digital", date: "Il y a 1 jour" }
         ];
 
@@ -302,7 +303,7 @@ $title = 'Carrières - ADA';
                             <h3 class="card-title group-hover:underline">${job.title}</h3>
                             <div class="card-info">
                                 <i class="fa-solid fa-location-dot"></i> ${job.city} 
-                                <span class="mx-2">•</span> 
+                                <span class="mx-2">â€¢</span> 
                                 <span class="font-bold text-black">${job.type}</span>
                             </div>
                         </div>
@@ -332,7 +333,7 @@ $title = 'Carrières - ADA';
                     // Logique permissive : si le champ est vide, on ignore le filtre
                     const matchKey = !keyword || job.title.toLowerCase().includes(keyword) || job.dept.toLowerCase().includes(keyword);
                     
-                    // Match Ville : "chalon" trouve "Chalon-sur-Saône"
+                    // Match Ville : "chalon" trouve "Chalon-sur-SaÃ´ne"
                     const matchLoc = !location || location === 'toute la france' || job.city.toLowerCase().includes(location) || job.region.toLowerCase().includes(location);
                     
                     const matchType = !contract || contract === 'Tous types' || job.type === contract;

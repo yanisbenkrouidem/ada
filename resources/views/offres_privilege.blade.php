@@ -1,8 +1,8 @@
-<?php 
+﻿<?php 
 $title = 'Le Club - ADA'; 
 require resource_path('views/partials/header.php');
 
-// Données des plans
+// DonnÃ©es des plans
 $plans = [
     [
         'id' => 'access',
@@ -12,7 +12,7 @@ $plans = [
         'price_monthly' => 50,
         'price_yearly' => 540,
         'image' => asset('images/4.jpg'), 
-        'benefits' => ['Accès prioritaire', '5% de réduction', 'Service client dédié']
+        'benefits' => ['AccÃ¨s prioritaire', '5% de rÃ©duction', 'Service client dÃ©diÃ©']
     ],
     [
         'id' => 'select',
@@ -22,27 +22,27 @@ $plans = [
         'price_monthly' => 150,
         'price_yearly' => 1620,
         'image' => asset('images/3.jpeg'),
-        'benefits' => ['Surclassement x1', 'Conducteur additionnel', 'Accès prioritaire']
+        'benefits' => ['Surclassement x1', 'Conducteur additionnel', 'AccÃ¨s prioritaire']
     ],
     [
         'id' => 'exclusive',
         'nom' => 'Exclusive',
-        'tagline' => 'Première',
+        'tagline' => 'PremiÃ¨re',
         'points' => 15000,
         'price_monthly' => 300,
         'price_yearly' => 3240,
         'image' => asset('images/2.avif'),
-        'benefits' => ['Surclassement illimité', 'Annulation J-1', 'Lavage inclus']
+        'benefits' => ['Surclassement illimitÃ©', 'Annulation J-1', 'Lavage inclus']
     ],
     [
         'id' => 'ultimate',
         'nom' => 'Ultimate',
-        'tagline' => 'Illimité',
+        'tagline' => 'IllimitÃ©',
         'points' => 20000,
         'price_monthly' => 500,
         'price_yearly' => 5400,
         'image' => asset('images/1.avif'),
-        'benefits' => ['Statut Gold', 'Service Voiturier', 'Accès Lounge', 'Conciergerie 24/7']
+        'benefits' => ['Statut Gold', 'Service Voiturier', 'AccÃ¨s Lounge', 'Conciergerie 24/7']
     ]
 ];
 ?>
@@ -52,6 +52,7 @@ $plans = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title; ?></title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -75,7 +76,7 @@ $plans = [
         }
 
         /* --- HEADER & NAV --- */
-        /* On force le header existant à s'adapter au style LV */
+        /* On force le header existant Ã  s'adapter au style LV */
         header {
             background-color: white !important;
             border-bottom: 1px solid #f0f0f0;
@@ -254,9 +255,9 @@ $plans = [
         <img src="<?php echo asset('images/montagne.jpg'); ?>" alt="Hero">
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="club-hero-content">
-            <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 block">Programme de Fidélité</span>
+            <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 block">Programme de FidÃ©litÃ©</span>
             <h1 class="text-5xl md:text-7xl font-light mb-6 tracking-wide">LE CLUB ADA</h1>
-            <p class="text-lg font-light max-w-xl mx-auto opacity-90">Accédez à un monde de privilèges exclusifs et redéfinissez votre expérience de voyage.</p>
+            <p class="text-lg font-light max-w-xl mx-auto opacity-90">AccÃ©dez Ã  un monde de privilÃ¨ges exclusifs et redÃ©finissez votre expÃ©rience de voyage.</p>
         </div>
     </section>
 
@@ -264,8 +265,8 @@ $plans = [
         <span class="section-label">La Collection</span>
         <h2 class="lv-title">Choisissez votre Exception</h2>
         <p class="lv-subtitle">
-            Une gamme d'abonnements conçue pour s'adapter à votre rythme de vie. 
-            Profitez de tarifs préférentiels et accumulez des points pour des expériences inoubliables.
+            Une gamme d'abonnements conÃ§ue pour s'adapter Ã  votre rythme de vie. 
+            Profitez de tarifs prÃ©fÃ©rentiels et accumulez des points pour des expÃ©riences inoubliables.
         </p>
 
         <div class="toggle-container">
@@ -290,12 +291,12 @@ $plans = [
                     <p class="text-xs text-gray-500 uppercase tracking-widest mb-2"><?php echo $plan['tagline']; ?></p>
                     
                     <div class="plan-price text-display" 
-                         data-monthly="<?php echo $plan['price_monthly']; ?> €" 
-                         data-yearly="<?php echo number_format($plan['price_yearly'], 0, ',', ' '); ?> €">
-                        <?php echo $plan['price_monthly']; ?> € <span class="text-xs">/ mois</span>
+                         data-monthly="<?php echo $plan['price_monthly']; ?> â‚¬" 
+                         data-yearly="<?php echo number_format($plan['price_yearly'], 0, ',', ' '); ?> â‚¬">
+                        <?php echo $plan['price_monthly']; ?> â‚¬ <span class="text-xs">/ mois</span>
                     </div>
 
-                    <span class="btn-discover">Découvrir</span>
+                    <span class="btn-discover">DÃ©couvrir</span>
                 </div>
             </div>
             <?php endforeach; ?>
@@ -305,10 +306,10 @@ $plans = [
     <div class="w-full bg-[#f6f5f3] py-24">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-                <span class="section-label">Expériences</span>
+                <span class="section-label">ExpÃ©riences</span>
                 <h2 class="text-3xl font-light mb-6">Le Simulateur de Voyage.</h2>
                 <p class="text-gray-600 mb-8 font-light leading-relaxed">
-                    Projetez-vous dans votre prochaine aventure. Estimez vos gains de points en fonction de vos trajets et transformez chaque kilomètre en une nouvelle opportunité.
+                    Projetez-vous dans votre prochaine aventure. Estimez vos gains de points en fonction de vos trajets et transformez chaque kilomÃ¨tre en une nouvelle opportunitÃ©.
                 </p>
                 <button onclick="openSimulator()" class="btn-black max-w-[200px]">Lancer le simulateur</button>
             </div>
@@ -320,12 +321,12 @@ $plans = [
 
     <footer class="text-center pb-10">
         <div class="flex justify-center gap-8 mb-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
-            <a href="#" class="hover:text-black">Conditions Générales</a>
-            <a href="#" class="hover:text-black">Politique de Confidentialité</a>
+            <a href="#" class="hover:text-black">Conditions GÃ©nÃ©rales</a>
+            <a href="#" class="hover:text-black">Politique de ConfidentialitÃ©</a>
             <a href="#" class="hover:text-black">Nous Contacter</a>
         </div>
         <img src="<?php echo asset('images/ADAlogo1.png'); ?>" class="h-6 mx-auto mb-4 opacity-50 block">
-        <p class="text-[10px] text-gray-400">&copy; <?php echo date('Y'); ?> ADA. Tous droits réservés.</p>
+        <p class="text-[10px] text-gray-400">&copy; <?php echo date('Y'); ?> ADA. Tous droits rÃ©servÃ©s.</p>
     </footer>
 
     <div id="modal-checkout" class="modal-overlay">
@@ -336,7 +337,7 @@ $plans = [
                 <button onclick="closeModal('modal-checkout')" class="absolute top-6 right-6 text-gray-400 hover:text-black"><i class="fa-solid fa-xmark text-xl"></i></button>
                 
                 <div>
-                    <span class="section-label mb-2">Votre sélection</span>
+                    <span class="section-label mb-2">Votre sÃ©lection</span>
                     <h2 id="modal-title" class="text-3xl font-light mb-2 uppercase">Nom du plan</h2>
                     <p id="modal-tagline" class="text-sm text-gray-500 mb-6 italic">Description</p>
                     
@@ -345,17 +346,17 @@ $plans = [
                     </div>
 
                     <div class="flex items-end gap-2 mb-2">
-                        <span id="modal-price" class="text-4xl font-light">0€</span>
+                        <span id="modal-price" class="text-4xl font-light">0â‚¬</span>
                         <span id="modal-period" class="text-sm text-gray-500 mb-1">/ mois</span>
                     </div>
                 </div>
 
                 <div id="step-1">
-                    <button onclick="toStep2()" class="btn-black">Procéder au paiement</button>
+                    <button onclick="toStep2()" class="btn-black">ProcÃ©der au paiement</button>
                 </div>
 
                 <div id="step-2" class="hidden">
-                    <input type="text" placeholder="Numéro de carte" class="w-full border-b border-gray-300 py-3 mb-4 outline-none text-sm font-futura">
+                    <input type="text" placeholder="NumÃ©ro de carte" class="w-full border-b border-gray-300 py-3 mb-4 outline-none text-sm font-futura">
                     <div class="flex gap-4 mb-6">
                         <input type="text" placeholder="MM/AA" class="w-1/2 border-b border-gray-300 py-3 outline-none text-sm">
                         <input type="text" placeholder="CVC" class="w-1/2 border-b border-gray-300 py-3 outline-none text-sm">
@@ -367,7 +368,7 @@ $plans = [
                     <i class="fa-solid fa-check text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Bienvenue au Club</h3>
                     <p class="text-sm text-gray-500 mb-6">Votre abonnement est actif.</p>
-                    <a href="#" id="final-link" class="underline text-xs font-bold uppercase tracking-widest">Accéder à mon espace</a>
+                    <a href="#" id="final-link" class="underline text-xs font-bold uppercase tracking-widest">AccÃ©der Ã  mon espace</a>
                 </div>
             </div>
         </div>
@@ -384,12 +385,12 @@ $plans = [
                     <input type="range" id="sim-dist" min="100" max="5000" step="100" value="500" class="w-full accent-black h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer" oninput="calcSim()">
                 </div>
                 <div>
-                    <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>Durée</span><span id="sim-days-display">3 jours</span></div>
+                    <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>DurÃ©e</span><span id="sim-days-display">3 jours</span></div>
                     <input type="range" id="sim-days" min="1" max="30" value="3" class="w-full accent-black h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer" oninput="calcSim()">
                 </div>
                 
                 <div class="text-center pt-6 border-top border-gray-100">
-                    <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">Gain estimé</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest mb-2">Gain estimÃ©</p>
                     <p class="text-5xl font-light" id="sim-result">1 500</p>
                     <p class="text-sm text-gray-500">Points</p>
                 </div>
@@ -419,9 +420,9 @@ $plans = [
             document.getElementById('modal-img').src = currentPlan.image;
             document.getElementById('modal-title').innerText = currentPlan.nom;
             document.getElementById('modal-tagline').innerText = currentPlan.tagline;
-            document.getElementById('modal-price').innerText = price + '€';
+            document.getElementById('modal-price').innerText = price + 'â‚¬';
             document.getElementById('modal-period').innerText = currentPeriod === 'monthly' ? '/ mois' : '/ an';
-            document.getElementById('btn-pay-final').innerText = 'Payer ' + price + '€';
+            document.getElementById('btn-pay-final').innerText = 'Payer ' + price + 'â‚¬';
 
             const list = document.getElementById('modal-benefits');
             list.innerHTML = '';

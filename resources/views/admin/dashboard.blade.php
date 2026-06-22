@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADA Admin - Dashboard</title>
+    <title>Ada Location Admin - Dashboard</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,7 +26,7 @@
         </div>
         <nav class="flex-1">
             <a href="<?php echo route('admin.dashboard'); ?>" class="sidebar-link active"><i class="fa-solid fa-grid-2"></i> Dashboard</a>
-            <a href="<?php echo route('admin.vehicules'); ?>" class="sidebar-link"><i class="fa-solid fa-car"></i> Véhicules</a>
+            <a href="<?php echo route('admin.vehicules'); ?>" class="sidebar-link"><i class="fa-solid fa-car"></i> VÃ©hicules</a>
             <a href="<?php echo route('admin.clients'); ?>" class="sidebar-link"><i class="fa-solid fa-users"></i> Clients</a>
             <a href="<?php echo route('admin.feedbacks'); ?>" class="sidebar-link relative">
                 <i class="fa-solid fa-envelope"></i> Feedbacks
@@ -55,8 +56,8 @@
                         <span class="text-gray-400 text-xs font-bold uppercase tracking-wider">Chiffre d'Affaire</span>
                         <div class="w-8 h-8 rounded-full bg-green-50 text-green-500 flex items-center justify-center"><i class="fa-solid fa-euro-sign"></i></div>
                     </div>
-                    <h3 class="text-3xl font-bold text-gray-800 mb-2"><?php echo number_format($stats['revenue'], 0, ',', ' '); ?> €</h3>
-                    <div class="flex items-center gap-2 text-xs"><span class="text-gray-400">Total cumulé</span></div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-2"><?php echo number_format($stats['revenue'], 0, ',', ' '); ?> â‚¬</h3>
+                    <div class="flex items-center gap-2 text-xs"><span class="text-gray-400">Total cumulÃ©</span></div>
                 </div>
 
                 <div class="ecom-card">
@@ -91,7 +92,7 @@
                         <div class="w-8 h-8 rounded-full bg-yellow-50 text-yellow-500 flex items-center justify-center"><i class="fa-solid fa-star"></i></div>
                     </div>
                     <h3 class="text-3xl font-bold text-gray-800 mb-2 relative z-10"><?php echo $stats['average_rating']; ?> <span class="text-lg text-gray-400 font-normal">/5</span></h3>
-                    <div class="flex items-center gap-2 text-xs relative z-10"><span class="text-gray-400">Basé sur <?php echo count($feedbacks); ?> avis</span></div>
+                    <div class="flex items-center gap-2 text-xs relative z-10"><span class="text-gray-400">BasÃ© sur <?php echo count($feedbacks); ?> avis</span></div>
                 </div>
             </div>
 
@@ -119,11 +120,11 @@
             </div>
 
             <div class="ecom-card">
-                <div class="flex justify-between items-center mb-6"><h3 class="text-lg font-bold text-gray-800">Véhicules les plus loués</h3></div>
+                <div class="flex justify-between items-center mb-6"><h3 class="text-lg font-bold text-gray-800">VÃ©hicules les plus louÃ©s</h3></div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left">
                         <thead class="text-gray-400 text-xs font-bold uppercase tracking-wider border-b border-gray-100">
-                            <tr><th class="pb-3 pl-2">Véhicule</th><th class="pb-3">Catégorie</th><th class="pb-3">Prix/Jour</th><th class="pb-3">Total Locations</th><th class="pb-3">Revenus</th><th class="pb-3 text-right pr-4">Statut</th></tr>
+                            <tr><th class="pb-3 pl-2">VÃ©hicule</th><th class="pb-3">CatÃ©gorie</th><th class="pb-3">Prix/Jour</th><th class="pb-3">Total Locations</th><th class="pb-3">Revenus</th><th class="pb-3 text-right pr-4">Statut</th></tr>
                         </thead>
                         <tbody class="text-sm">
                             <?php foreach($topVehicules as $v): ?>
@@ -137,11 +138,11 @@
                                     <div><span class="font-bold text-gray-700 block"><?php echo $v->marque . ' ' . $v->modele; ?></span><span class="text-[10px] text-gray-400"><?php echo $v->immat; ?></span></div>
                                 </td>
                                 <td class="py-3 text-gray-500"><?php echo $v->categorie_nom; ?></td>
-                                <td class="py-3 font-bold text-gray-800"><?php echo $v->tarifjournee; ?> €</td>
-                                <td class="py-3 font-bold text-blue-600 pl-4"><?php echo $v->total_locations; ?></td> <td class="py-3 font-bold text-green-600"><?php echo number_format($v->revenu_genere, 0, ',', ' '); ?> €</td>
+                                <td class="py-3 font-bold text-gray-800"><?php echo $v->tarifjournee; ?> â‚¬</td>
+                                <td class="py-3 font-bold text-blue-600 pl-4"><?php echo $v->total_locations; ?></td> <td class="py-3 font-bold text-green-600"><?php echo number_format($v->revenu_genere, 0, ',', ' '); ?> â‚¬</td>
                                 <td class="py-3 text-right pr-4">
                                     <?php if($v->statut === 'Disponible'): ?><span class="px-2 py-1 rounded bg-green-100 text-green-600 text-[10px] font-bold uppercase">Dispo</span>
-                                    <?php else: ?><span class="px-2 py-1 rounded bg-red-100 text-red-600 text-[10px] font-bold uppercase">Louée</span><?php endif; ?>
+                                    <?php else: ?><span class="px-2 py-1 rounded bg-red-100 text-red-600 text-[10px] font-bold uppercase">LouÃ©e</span><?php endif; ?>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
@@ -162,7 +163,7 @@
 
         new Chart(ctx, {
             type: 'line',
-            data: { labels: chartLabels, datasets: [{ label: 'Revenus (€)', data: chartData, borderColor: '#F97316', backgroundColor: gradient, borderWidth: 3, tension: 0.4, fill: true, pointBackgroundColor: '#fff', pointBorderColor: '#F97316', pointBorderWidth: 2, pointRadius: 5 }] },
+            data: { labels: chartLabels, datasets: [{ label: 'Revenus (â‚¬)', data: chartData, borderColor: '#F97316', backgroundColor: gradient, borderWidth: 3, tension: 0.4, fill: true, pointBackgroundColor: '#fff', pointBorderColor: '#F97316', pointBorderWidth: 2, pointRadius: 5 }] },
             options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, grid: { borderDash: [5, 5], color: '#f3f4f6' } }, x: { grid: { display: false } } } }
         });
     </script>

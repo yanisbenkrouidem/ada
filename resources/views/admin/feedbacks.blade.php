@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedbacks - ADA Admin</title>
+    <title>Feedbacks - Ada Location Admin</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
         </div>
         <nav class="flex-1">
             <a href="<?php echo route('admin.dashboard'); ?>" class="sidebar-link"><i class="fa-solid fa-grid-2"></i> Dashboard</a>
-            <a href="<?php echo route('admin.vehicules'); ?>" class="sidebar-link"><i class="fa-solid fa-car"></i> Véhicules</a>
+            <a href="<?php echo route('admin.vehicules'); ?>" class="sidebar-link"><i class="fa-solid fa-car"></i> VÃ©hicules</a>
             <a href="<?php echo route('admin.clients'); ?>" class="sidebar-link"><i class="fa-solid fa-users"></i> Clients</a>
             <a href="<?php echo route('admin.feedbacks'); ?>" class="sidebar-link active"><i class="fa-solid fa-envelope"></i> Feedbacks</a>
         </nav>
@@ -56,7 +57,7 @@
                                     <h3 class="font-bold text-gray-800"><?php echo $f->rating; ?></h3>
                                     <span class="text-xs text-gray-400"><?php echo date('d/m/Y H:i', strtotime($f->created_at)); ?></span>
                                 </div>
-                                <p class="text-sm text-gray-500 mt-1">Page concernée : <span class="font-mono bg-white px-1 rounded border"><?php echo $f->page; ?></span></p>
+                                <p class="text-sm text-gray-500 mt-1">Page concernÃ©e : <span class="font-mono bg-white px-1 rounded border"><?php echo $f->page; ?></span></p>
                                 <p class="text-xs text-gray-400 mt-1">IP: <?php echo $f->ip_address; ?></p>
                             </div>
                         </div>

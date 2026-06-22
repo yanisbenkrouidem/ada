@@ -1,5 +1,5 @@
-<?php 
-$title = 'Finaliser la réservation - ADA'; 
+﻿<?php 
+$title = 'Finaliser la rÃ©servation - ADA'; 
 require resource_path('views/partials/header.php');
 
 $img = $vehicule->category->photo ? 'images/'.$vehicule->category->photo : 'images/voiture.png';
@@ -12,6 +12,7 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title; ?></title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -69,7 +70,7 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
             outline: none;
         }
 
-        /* --- DESIGN CALENDRIER FLATPICKR (COPIÉ COLLÉ DES AUTRES PAGES) --- */
+        /* --- DESIGN CALENDRIER FLATPICKR (COPIÃ‰ COLLÃ‰ DES AUTRES PAGES) --- */
         .flatpickr-calendar { 
             background: #ffffff !important; 
             border: none !important;
@@ -107,8 +108,8 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
     <div class="max-w-7xl mx-auto px-6 py-10 relative z-10">
         
         <div class="text-center mb-12 animate-up">
-            <p class="text-gray-300 text-xs font-bold uppercase tracking-[0.2em] mb-3">Prochaine étape : L'aventure</p>
-            <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl">Finaliser votre réservation</h1>
+            <p class="text-gray-300 text-xs font-bold uppercase tracking-[0.2em] mb-3">Prochaine Ã©tape : L'aventure</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl">Finaliser votre rÃ©servation</h1>
         </div>
 
         <form action="<?php echo route('reservation.store', $vehicule->id); ?>" method="POST" id="resaForm">
@@ -161,22 +162,22 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
                             </div>
                             <div>
                                 <h2 class="text-xl font-bold text-white uppercase tracking-wide">Vos dates</h2>
-                                <p class="text-gray-400 text-sm">Sélectionnez vos dates pour calculer le prix.</p>
+                                <p class="text-gray-400 text-sm">SÃ©lectionnez vos dates pour calculer le prix.</p>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="group">
-                                <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 ml-1">Départ</label>
+                                <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 ml-1">DÃ©part</label>
                                 <input type="text" id="start_date" name="dateheuredebut" required
-                                       placeholder="Sélectionner..."
+                                       placeholder="SÃ©lectionner..."
                                        class="w-full input-glass rounded-xl p-4 text-white font-bold cursor-pointer">
                             </div>
 
                             <div class="group">
                                 <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 ml-1">Retour</label>
                                 <input type="text" id="end_date" name="dateheurefin" required
-                                       placeholder="Sélectionner..."
+                                       placeholder="SÃ©lectionner..."
                                        class="w-full input-glass rounded-xl p-4 text-white font-bold cursor-pointer">
                             </div>
                         </div>
@@ -189,12 +190,12 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
                         
                         <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
                             <div class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-sm font-bold">2</div>
-                            Paiement Sécurisé
+                            Paiement SÃ©curisÃ©
                         </h3>
 
                         <div class="space-y-4 pointer-events-none select-none">
                             <div class="relative">
-                                <input type="text" placeholder="•••• •••• •••• 4242" class="w-full pl-12 p-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder:text-white/70 font-mono font-bold tracking-widest outline-none">
+                                <input type="text" placeholder="â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ 4242" class="w-full pl-12 p-4 bg-white/10 border border-white/30 rounded-xl text-white placeholder:text-white/70 font-mono font-bold tracking-widest outline-none">
                                 <i class="fa-regular fa-credit-card absolute left-4 top-4 text-white"></i>
                             </div>
                             
@@ -209,29 +210,29 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
                         </div>
 
                         <p class="text-[10px] text-gray-300 mt-4 italic text-center opacity-80">
-                            <i class="fa-solid fa-shield-halved mr-1"></i> Aucune somme réelle ne sera débitée (Projet Étudiant).
+                            <i class="fa-solid fa-shield-halved mr-1"></i> Aucune somme rÃ©elle ne sera dÃ©bitÃ©e (Projet Ã‰tudiant).
                         </p>
                     </div>
                 </div>
 
                 <div class="lg:col-span-4 animate-up delay-200">
                     <div class="glass-panel rounded-[2rem] p-8 sticky top-8">
-                        <h3 class="text-xl font-bold text-white mb-6">Résumé</h3>
+                        <h3 class="text-xl font-bold text-white mb-6">RÃ©sumÃ©</h3>
                         
                         <div class="space-y-4 border-t border-white/10 pt-6 mb-6">
                             <div class="flex justify-between text-sm text-gray-300">
-                                <span>Durée</span>
+                                <span>DurÃ©e</span>
                                 <span id="display_days" class="font-bold text-white">0 jours</span>
                             </div>
                             <div class="flex justify-between text-sm text-gray-300">
                                 <span>Tarif journalier</span>
-                                <span class="font-bold text-white"><?php echo number_format($tarifJour, 2, ',', ' '); ?> €</span>
+                                <span class="font-bold text-white"><?php echo number_format($tarifJour, 2, ',', ' '); ?> â‚¬</span>
                             </div>
                         </div>
 
                         <div class="flex justify-between items-center mb-8 bg-white/5 p-4 rounded-xl border border-white/10">
                             <span class="text-lg font-bold text-white">Total</span>
-                            <span class="text-2xl font-bold text-white"><span id="display_total">0,00</span> €</span>
+                            <span class="text-2xl font-bold text-white"><span id="display_total">0,00</span> â‚¬</span>
                         </div>
 
                         <button type="submit" id="btn-submit" disabled class="w-full bg-white/10 text-gray-400 font-bold py-4 rounded-xl cursor-not-allowed transition-all duration-300 flex justify-center items-center gap-2 border border-white/10 backdrop-blur-md">
@@ -253,7 +254,7 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
             // Configuration Flatpickr
             const config = { 
                 enableTime: true, 
-                dateFormat: "Y-m-d H:i", // Format affiché et valeur
+                dateFormat: "Y-m-d H:i", // Format affichÃ© et valeur
                 time_24hr: true, 
                 minDate: "today", 
                 locale: "fr",
@@ -279,7 +280,7 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
             const endInput = document.getElementById('end_date').value;
             const btn = document.getElementById('btn-submit');
 
-            // Mise à jour des inputs cachés si besoin pour le backend
+            // Mise Ã  jour des inputs cachÃ©s si besoin pour le backend
             document.getElementById('real_start_date').value = startInput;
             document.getElementById('real_end_date').value = endInput;
 
@@ -287,7 +288,7 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
                 const start = new Date(startInput);
                 const end = new Date(endInput);
                 
-                // Calcul différence
+                // Calcul diffÃ©rence
                 const diffTime = end - start; 
                 
                 if (diffTime <= 0) {
@@ -295,7 +296,7 @@ $tarifJour = $vehicule->category->tarifjournee ?? 50;
                     return;
                 }
 
-                // Arrondi au jour supérieur
+                // Arrondi au jour supÃ©rieur
                 let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                 if(diffDays <= 0) diffDays = 1;
 

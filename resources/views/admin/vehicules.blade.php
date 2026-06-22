@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Véhicules - ADA Admin</title>
+    <title>VÃ©hicules - Ada Location Admin</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/ada.png') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
         </div>
         <nav class="flex-1">
             <a href="<?php echo route('admin.dashboard'); ?>" class="sidebar-link"><i class="fa-solid fa-grid-2"></i> Dashboard</a>
-            <a href="<?php echo route('admin.vehicules'); ?>" class="sidebar-link active"><i class="fa-solid fa-car"></i> Véhicules</a>
+            <a href="<?php echo route('admin.vehicules'); ?>" class="sidebar-link active"><i class="fa-solid fa-car"></i> VÃ©hicules</a>
             <a href="<?php echo route('admin.clients'); ?>" class="sidebar-link"><i class="fa-solid fa-users"></i> Clients</a>
             <a href="<?php echo route('admin.feedbacks'); ?>" class="sidebar-link relative">
                 <i class="fa-solid fa-envelope"></i> Feedbacks
@@ -45,9 +46,9 @@
                 <table class="w-full text-left">
                     <thead class="text-gray-400 text-xs font-bold uppercase border-b border-gray-100">
                         <tr>
-                            <th class="pb-4 pl-2">Modèle</th>
+                            <th class="pb-4 pl-2">ModÃ¨le</th>
                             <th class="pb-4">Immatriculation</th>
-                            <th class="pb-4">Catégorie</th>
+                            <th class="pb-4">CatÃ©gorie</th>
                             <th class="pb-4">Agence</th>
                             <th class="pb-4">Tarif/J</th>
                             <th class="pb-4 text-right">Action</th>
@@ -65,7 +66,7 @@
                             <td class="py-4 font-mono text-gray-500"><?php echo $v->immat; ?></td>
                             <td class="py-4"><span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-bold"><?php echo $v->categorie; ?></span></td>
                             <td class="py-4 text-gray-500"><i class="fa-solid fa-location-dot mr-1"></i> <?php echo $v->agence_ville; ?></td>
-                            <td class="py-4 font-bold"><?php echo $v->tarifjournee; ?> €</td>
+                            <td class="py-4 font-bold"><?php echo $v->tarifjournee; ?> â‚¬</td>
                             <td class="py-4 text-right"><button class="text-gray-400 hover:text-orange-500"><i class="fa-solid fa-pen-to-square"></i></button></td>
                         </tr>
                         <?php endforeach; ?>
