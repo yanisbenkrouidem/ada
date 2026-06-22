@@ -38,6 +38,8 @@ $heroImage2 = function_exists('asset') ? asset('images/williamsreunauly.jpg') : 
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Ada Location</title>
+    <link rel="icon" type="image/png" href="<?php echo function_exists('asset') ? asset('images/ada.png') : 'images/ada.png'; ?>">
     
     <meta name="csrf-token" content="<?php echo csrf_token(); ?>">
 
