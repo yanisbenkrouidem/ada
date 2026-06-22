@@ -18,11 +18,11 @@ class OAuthController extends Controller
      */
     private function ensureGoogleConfig()
     {
-        // Try env vars first, then use split fallback values
-        $clientId = $this->resolveEnv('GOOGLE_CLIENT_ID') ?: $this->getGId();
-        $clientSecret = $this->resolveEnv('GOOGLE_CLIENT_SECRET') ?: $this->getGSec();
-        $redirectUri = $this->resolveEnv('GOOGLE_REDIRECT_URI') 
-            ?: 'https://ada.benkrouidem.com/auth/google/callback';
+        // Try env vars first, then use split fallback values, ensuring we trim any accidental whitespaces
+        $clientId = trim($this->resolveEnv('GOOGLE_CLIENT_ID') ?: $this->getGId());
+        $clientSecret = trim($this->resolveEnv('GOOGLE_CLIENT_SECRET') ?: $this->getGSec());
+        $redirectUri = trim($this->resolveEnv('GOOGLE_REDIRECT_URI') 
+            ?: 'https://ada.benkrouidem.com/auth/google/callback');
 
         config([
             'services.google.client_id' => $clientId,
